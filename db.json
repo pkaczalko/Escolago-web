@@ -1,0 +1,12 @@
+{
+    "modules":[
+        {
+            "name":"Biblioteka",
+            "id": 1
+        },
+        {
+            "name":"Świetlica",
+            "id": 2
+        }
+    ]
+}
