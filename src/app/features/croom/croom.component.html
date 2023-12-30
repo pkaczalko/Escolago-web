@@ -29,7 +29,7 @@
         <td>{{ book.isbn }}</td>
         <td>
           <span *ngFor="let author of book.authors; index as i"
-            >{{ author.name
+          >{{ author.name
             }}<span *ngIf="i < book.authors.length - 1">, </span></span
           >
         </td>

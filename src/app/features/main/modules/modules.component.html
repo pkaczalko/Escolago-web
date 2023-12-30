@@ -2,7 +2,7 @@
 <p-table [value]="modules" selectionMode="single">
   <ng-template pTemplate="body" let-module>
     <tr>
-      <td routerLink="er">{{ module.name }}</td>
+      <td routerLink="{{module.link}}">{{ module.name }}</td>
     </tr>
   </ng-template>
 </p-table>

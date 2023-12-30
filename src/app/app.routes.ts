@@ -1,8 +1,15 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './features/main/main.component';
-import {LibraryComponent} from "./features/library/library.component";
+import { LibraryComponent } from './features/library/library.component';
+import { CroomComponent } from './features/croom/croom.component';
+import { SearchComponent } from './features/search/search.component';
+import { SingleComponent } from './shared/single/single.component';
 
 export const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'library',component:LibraryComponent}
+  { path: 'library', component: LibraryComponent },
+  { path: 'croom', component: CroomComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'library/:id', component: SingleComponent },
+  { path: 'croom/:id', component: SingleComponent },
 ];

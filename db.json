@@ -1,12 +1,7743 @@
 {
     "modules":[
-        {
+        {   "link":"/library",
             "name":"Biblioteka",
             "id": 1
         },
-        {
+        {   "link":"/croom",
             "name":"Świetlica",
             "id": 2
         }
-    ]
+    ],
+    "catalogue":[
+    {
+        "id": 1,
+        "isbn": "000000000000",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    {
+        "id": 2,
+        "isbn": "000000000001",
+        "title": "The big book1",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            }
+            
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            }    
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    {
+        "id": 3,
+        "isbn": "000000000003",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    {
+        "id": 4,
+        "isbn": "000000000004",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    {
+        "id": 5,
+        "isbn": "000000000005",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },    {
+        "id":6 ,
+        "isbn": "000000000006",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":7 ,
+        "isbn": "000000000007",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":8 ,
+        "isbn": "000000000008",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":9 ,
+        "isbn": "000000000009",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":10 ,
+        "isbn": "0000000000010",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":11 ,
+        "isbn": "0000000000011",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":12 ,
+        "isbn": "0000000000012",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":13 ,
+        "isbn": "0000000000013",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":14 ,
+        "isbn": "0000000000014",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":15 ,
+        "isbn": "0000000000015",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":16 ,
+        "isbn": "0000000000016",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":17 ,
+        "isbn": "0000000000017",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":18 ,
+        "isbn": "0000000000018",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":19 ,
+        "isbn": "0000000000019",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":20 ,
+        "isbn": "0000000000020",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":21 ,
+        "isbn": "0000000000021",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":22 ,
+        "isbn": "0000000000022",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":23 ,
+        "isbn": "0000000000023",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":24 ,
+        "isbn": "0000000000024",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":25 ,
+        "isbn": "0000000000025",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":26 ,
+        "isbn": "0000000000026",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":27 ,
+        "isbn": "0000000000027",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":28 ,
+        "isbn": "0000000000028",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":29 ,
+        "isbn": "0000000000029",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":30 ,
+        "isbn": "0000000000030",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":31 ,
+        "isbn": "0000000000031",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":32 ,
+        "isbn": "0000000000032",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":33 ,
+        "isbn": "0000000000033",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":34 ,
+        "isbn": "0000000000034",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":35 ,
+        "isbn": "0000000000035",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":36 ,
+        "isbn": "0000000000036",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":37 ,
+        "isbn": "0000000000037",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":38 ,
+        "isbn": "0000000000038",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":39 ,
+        "isbn": "0000000000039",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":40 ,
+        "isbn": "0000000000040",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":41 ,
+        "isbn": "0000000000041",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":42 ,
+        "isbn": "0000000000042",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":43 ,
+        "isbn": "0000000000043",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":44 ,
+        "isbn": "0000000000044",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":45 ,
+        "isbn": "0000000000045",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":46 ,
+        "isbn": "0000000000046",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":47 ,
+        "isbn": "0000000000047",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":48 ,
+        "isbn": "0000000000048",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":49 ,
+        "isbn": "0000000000049",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":50 ,
+        "isbn": "0000000000050",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":51 ,
+        "isbn": "0000000000051",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":52 ,
+        "isbn": "0000000000052",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":53 ,
+        "isbn": "0000000000053",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":54 ,
+        "isbn": "0000000000054",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":55 ,
+        "isbn": "0000000000055",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":56 ,
+        "isbn": "0000000000056",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":57 ,
+        "isbn": "0000000000057",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":58 ,
+        "isbn": "0000000000058",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":59 ,
+        "isbn": "0000000000059",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":60 ,
+        "isbn": "0000000000060",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":61 ,
+        "isbn": "0000000000061",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":62 ,
+        "isbn": "0000000000062",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":63 ,
+        "isbn": "0000000000063",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":64 ,
+        "isbn": "0000000000064",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":65 ,
+        "isbn": "0000000000065",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":66 ,
+        "isbn": "0000000000066",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":67 ,
+        "isbn": "0000000000067",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":68 ,
+        "isbn": "0000000000068",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":69 ,
+        "isbn": "0000000000069",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":70 ,
+        "isbn": "0000000000070",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":71 ,
+        "isbn": "0000000000071",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":72 ,
+        "isbn": "0000000000072",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":73 ,
+        "isbn": "0000000000073",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":74 ,
+        "isbn": "0000000000074",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":75 ,
+        "isbn": "0000000000075",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":76 ,
+        "isbn": "0000000000076",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":77 ,
+        "isbn": "0000000000077",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":78 ,
+        "isbn": "0000000000078",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":79 ,
+        "isbn": "0000000000079",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":80 ,
+        "isbn": "0000000000080",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":81 ,
+        "isbn": "0000000000081",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":82 ,
+        "isbn": "0000000000082",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":83 ,
+        "isbn": "0000000000083",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":84 ,
+        "isbn": "0000000000084",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":85 ,
+        "isbn": "0000000000085",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":86 ,
+        "isbn": "0000000000086",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":87 ,
+        "isbn": "0000000000087",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":88 ,
+        "isbn": "0000000000088",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":89 ,
+        "isbn": "0000000000089",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":90 ,
+        "isbn": "0000000000090",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":91 ,
+        "isbn": "0000000000091",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":92 ,
+        "isbn": "0000000000092",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":93 ,
+        "isbn": "0000000000093",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":94 ,
+        "isbn": "0000000000094",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":95 ,
+        "isbn": "0000000000095",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":96 ,
+        "isbn": "0000000000096",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":97 ,
+        "isbn": "0000000000097",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":98 ,
+        "isbn": "0000000000098",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":99 ,
+        "isbn": "0000000000099",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":100 ,
+        "isbn": "00000000000100",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":101 ,
+        "isbn": "00000000000101",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":102 ,
+        "isbn": "00000000000102",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":103 ,
+        "isbn": "00000000000103",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":104 ,
+        "isbn": "00000000000104",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":105 ,
+        "isbn": "00000000000105",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":106 ,
+        "isbn": "00000000000106",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":107 ,
+        "isbn": "00000000000107",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":108 ,
+        "isbn": "00000000000108",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":109 ,
+        "isbn": "00000000000109",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":110 ,
+        "isbn": "00000000000110",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":111 ,
+        "isbn": "00000000000111",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":112 ,
+        "isbn": "00000000000112",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":113 ,
+        "isbn": "00000000000113",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":114 ,
+        "isbn": "00000000000114",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":115 ,
+        "isbn": "00000000000115",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":116 ,
+        "isbn": "00000000000116",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":117 ,
+        "isbn": "00000000000117",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":118 ,
+        "isbn": "00000000000118",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":119 ,
+        "isbn": "00000000000119",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":120 ,
+        "isbn": "00000000000120",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":121 ,
+        "isbn": "00000000000121",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":122 ,
+        "isbn": "00000000000122",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":123 ,
+        "isbn": "00000000000123",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":124 ,
+        "isbn": "00000000000124",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":125 ,
+        "isbn": "00000000000125",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":126 ,
+        "isbn": "00000000000126",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":127 ,
+        "isbn": "00000000000127",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":128 ,
+        "isbn": "00000000000128",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":129 ,
+        "isbn": "00000000000129",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":130 ,
+        "isbn": "00000000000130",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":131 ,
+        "isbn": "00000000000131",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":132 ,
+        "isbn": "00000000000132",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":133 ,
+        "isbn": "00000000000133",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":134 ,
+        "isbn": "00000000000134",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":135 ,
+        "isbn": "00000000000135",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":136 ,
+        "isbn": "00000000000136",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":137 ,
+        "isbn": "00000000000137",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":138 ,
+        "isbn": "00000000000138",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":139 ,
+        "isbn": "00000000000139",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":140 ,
+        "isbn": "00000000000140",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":141 ,
+        "isbn": "00000000000141",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":142 ,
+        "isbn": "00000000000142",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":143 ,
+        "isbn": "00000000000143",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":144 ,
+        "isbn": "00000000000144",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":145 ,
+        "isbn": "00000000000145",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":146 ,
+        "isbn": "00000000000146",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":147 ,
+        "isbn": "00000000000147",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":148 ,
+        "isbn": "00000000000148",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":149 ,
+        "isbn": "00000000000149",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":150 ,
+        "isbn": "00000000000150",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":151 ,
+        "isbn": "00000000000151",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":152 ,
+        "isbn": "00000000000152",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":153 ,
+        "isbn": "00000000000153",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":154 ,
+        "isbn": "00000000000154",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":155 ,
+        "isbn": "00000000000155",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":156 ,
+        "isbn": "00000000000156",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":157 ,
+        "isbn": "00000000000157",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":158 ,
+        "isbn": "00000000000158",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":159 ,
+        "isbn": "00000000000159",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":160 ,
+        "isbn": "00000000000160",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":161 ,
+        "isbn": "00000000000161",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":162 ,
+        "isbn": "00000000000162",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":163 ,
+        "isbn": "00000000000163",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":164 ,
+        "isbn": "00000000000164",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":165 ,
+        "isbn": "00000000000165",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":166 ,
+        "isbn": "00000000000166",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":167 ,
+        "isbn": "00000000000167",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":168 ,
+        "isbn": "00000000000168",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":169 ,
+        "isbn": "00000000000169",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":170 ,
+        "isbn": "00000000000170",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":171 ,
+        "isbn": "00000000000171",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":172 ,
+        "isbn": "00000000000172",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":173 ,
+        "isbn": "00000000000173",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":174 ,
+        "isbn": "00000000000174",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":175 ,
+        "isbn": "00000000000175",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":176 ,
+        "isbn": "00000000000176",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":177 ,
+        "isbn": "00000000000177",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":178 ,
+        "isbn": "00000000000178",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":179 ,
+        "isbn": "00000000000179",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":180 ,
+        "isbn": "00000000000180",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":181 ,
+        "isbn": "00000000000181",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":182 ,
+        "isbn": "00000000000182",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":183 ,
+        "isbn": "00000000000183",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":184 ,
+        "isbn": "00000000000184",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":185 ,
+        "isbn": "00000000000185",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":186 ,
+        "isbn": "00000000000186",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":187 ,
+        "isbn": "00000000000187",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":188 ,
+        "isbn": "00000000000188",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":189 ,
+        "isbn": "00000000000189",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":190 ,
+        "isbn": "00000000000190",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":191 ,
+        "isbn": "00000000000191",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":192 ,
+        "isbn": "00000000000192",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":193 ,
+        "isbn": "00000000000193",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":194 ,
+        "isbn": "00000000000194",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":195 ,
+        "isbn": "00000000000195",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":196 ,
+        "isbn": "00000000000196",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":197 ,
+        "isbn": "00000000000197",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":198 ,
+        "isbn": "00000000000198",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    },
+    
+    {
+        "id":199 ,
+        "isbn": "00000000000199",
+        "title": "The big book",
+        "authors": [
+            {   "authorId": 1,
+                "name": "James Butt"
+            },
+            {   "authorId": 2,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 3,
+                "name": "Hugh Inus"
+            },
+            {   "authorId": 4,
+                "name": "Hugh Inus"
+            }
+        ],
+        "genre": [
+            {   "genereID": 24,
+                "genere": "fantasy"
+            },
+            {   "genereID": 1,
+                "genere": "poetry"
+            }
+        ],
+        "date": "2015-09-13",
+        "status": {
+            "howMany": 10,
+            "isRented": false,
+            "idUser": null
+        },
+        "cover": "default.png",
+        "shelf": {
+            "region": "A",
+            "shelf": "35"
+        }
+    }
+
+
+
+
+]
 }
