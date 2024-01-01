@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingleComponent } from './single.component';
+import { SingleBookComponent } from './single-book.component';
 
-describe('SingleComponent', () => {
-  let component: SingleComponent;
-  let fixture: ComponentFixture<SingleComponent>;
+describe('SingleBookComponent', () => {
+  let component: SingleBookComponent;
+  let fixture: ComponentFixture<SingleBookComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SingleComponent]
+      imports: [SingleBookComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SingleComponent);
+    fixture = TestBed.createComponent(SingleBookComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,9 +3,9 @@ import { LazyLoadEvent } from 'primeng/api';
 import { TableLazyLoadEvent, TableModule } from 'primeng/table';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CatalogueService } from '../../core/services/catalogue/catalogue.service';
-import { Catalogue } from '../../core/interfaces/catalogue';
+import { CatalogueDTO, CatalogueTable } from '../../core/interfaces/catalogue';
 import { NgForOf, NgIf } from '@angular/common';
-import { toNumbers } from '@angular/compiler-cli/src/version_helpers';
+import { Shared } from '../../shared/shared';
 
 @Component({
   selector: 'app-library',
@@ -15,15 +15,11 @@ import { toNumbers } from '@angular/compiler-cli/src/version_helpers';
   styleUrl: './library.component.css',
 })
 export class LibraryComponent {
-  catalogue!: Catalogue[];
+  catalogue!: CatalogueTable[];
 
   totalRecords!: number;
 
   loading: boolean = false;
-
-  selectAll: boolean = false;
-
-  selected!: Catalogue[];
 
   constructor(private catalogueService: CatalogueService) {}
 
@@ -33,15 +29,27 @@ export class LibraryComponent {
 
   loadCatalogue(event: TableLazyLoadEvent) {
     this.loading = true;
-    console.log(event.first, (event.first || 0) / 10 + 1);
     setTimeout(() => {
       this.catalogueService
-        .getCatalogue((event.first || 0) / 10 + 1)
+        .getCatalogue((event.first || 0) / 10 || 0)
         .subscribe((res) => {
-          this.catalogue = res.body;
-          this.totalRecords = +(<string>res.headers.get('X-Total-Count'));
+          this.catalogue = this.prepareData(res.catalogue);
+          this.totalRecords = res.totalCount;
           this.loading = false;
         });
-    }, 1000);
+    }, 500);
+  }
+
+  prepareData(books: CatalogueDTO[]): CatalogueTable[] {
+    let table: CatalogueTable[] = [];
+
+    books.forEach((book) => {
+      table.push({
+        ...book,
+        authors: Shared.authorsToString(book.authors),
+        genres: Shared.generesToString(book.genres),
+      } as CatalogueTable);
+    });
+    return table;
   }
 }

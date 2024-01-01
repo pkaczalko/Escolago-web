@@ -3,6 +3,14 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
-body{
-  background-color: #63BBE3;
+body {
+  background-color: #63bbe3;
+  margin: 0;
+}
+
+.pcardHeader {
+  .p-card-header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }

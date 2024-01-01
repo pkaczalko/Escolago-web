@@ -1,15 +1,22 @@
-export interface Catalogue {
+export interface CatalogueDTO {
   id: number;
+  authors: [];
+  genres: [];
   isbn: string;
-  authors: {};
-  genre: {};
-  date: Date;
-  status: {};
+  book_title: string;
   cover: string;
-  shelf: {};
+}
+
+export interface CatalogueTable {
+  id: number;
+  authors: string;
+  genres: string;
+  isbn: string;
+  book_title: string;
+  cover: string;
 }
 
 export interface CatalogueResponse {
-  catalogue: Catalogue[];
-  totalRecords: number;
+  catalogue: CatalogueDTO[];
+  totalCount: number;
 }

@@ -1,0 +1,59 @@
+.singleBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1rem;
+
+  .col1 {
+    width: 10dvw;
+    .okładka {
+      width: 200px;
+      height: 300px;
+      background-color: red;
+    }
+  }
+  .col2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5dvw;
+    width: 85dvw;
+
+    .col2\.1 {
+      display: flex;
+      flex-direction: row;
+
+      .tytul {
+        height: 200px;
+        width: 100%;
+      }
+
+      .edytuj {
+        height: 1px;
+        margin-right: 1rem;
+        padding: 0.5rem;
+      }
+    }
+    .info {
+      width: 100%;
+    }
+
+    .col2\.3 {
+      display: flex;
+      flex-direction: row;
+      .kopie {
+        width: 100%;
+      }
+
+      .dodaj {
+        height: 1px;
+        margin-right: 1rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+div.editBlock > p {
+  margin: 0;
+  padding: 0;
+}

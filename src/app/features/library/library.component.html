@@ -17,23 +17,20 @@
         </th>
       </tr>
       <tr>
-        <th>title</th>
-        <th>isbn</th>
-        <th>author</th>
-        <th>status</th>
+        <th>Tytuł</th>
+        <th>Isbn</th>
+        <th>Autor</th>
+        <th>Gatunek</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-book>
       <tr>
-        <td>{{ book.title }}</td>
-        <td>{{ book.isbn }}</td>
+        <td>{{ book.book_title }}</td>
+        <td>{{ book.id }}</td>
         <td>
-          <span *ngFor="let author of book.authors; index as i"
-            >{{ author.name
-            }}<span *ngIf="i < book.authors.length - 1">, </span></span
-          >
+          {{ book.authors }}
         </td>
-        <td>{{ book.status.isRented }}</td>
+        <td>{{ book.genres }}</td>
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">

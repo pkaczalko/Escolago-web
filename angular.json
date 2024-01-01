@@ -57,6 +57,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+
           "configurations": {
             "production": {
               "buildTarget": "escolago-web:build:production"
@@ -70,7 +71,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "escolago-web:build"
+            "buildTarget": "escolago-web:build",
+
           }
         },
         "test": {

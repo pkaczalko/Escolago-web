@@ -1,45 +1,45 @@
-<div class="table">
-  <p-table
-    [value]="catalogue"
-    [lazy]="true"
-    (onLazyLoad)="loadCatalogue($event)"
-    dataKey="isbn"
-    [tableStyle]="{ 'min-width': '75rem' }"
-    [paginator]="true"
-    [rows]="10"
-    [totalRecords]="totalRecords"
-    [loading]="loading"
-  >
-    <ng-template pTemplate="header">
-      <tr>
-        <th>
-          <p-columnFilter type="text" field="title"></p-columnFilter>
-        </th>
-      </tr>
-      <tr>
-        <th>title</th>
-        <th>isbn</th>
-        <th>author</th>
-        <th>status</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-book>
-      <tr>
-        <td>{{ book.title }}</td>
-        <td>{{ book.isbn }}</td>
-        <td>
-          <span *ngFor="let author of book.authors; index as i"
-          >{{ author.name
-            }}<span *ngIf="i < book.authors.length - 1">, </span></span
-          >
-        </td>
-        <td>{{ book.status.isRented }}</td>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="summary">
-      <div class="flex align-items-center justify-content-between">
-        Łączna ilość zasobów: {{ totalRecords }}
-      </div>
-    </ng-template>
-  </p-table>
-</div>
+<!--<div class="table">-->
+<!--  <p-table-->
+<!--    [value]="catalogue"-->
+<!--    [lazy]="true"-->
+<!--    (onLazyLoad)="loadCatalogue($event)"-->
+<!--    dataKey="isbn"-->
+<!--    [tableStyle]="{ 'min-width': '75rem' }"-->
+<!--    [paginator]="true"-->
+<!--    [rows]="10"-->
+<!--    [totalRecords]="totalRecords"-->
+<!--    [loading]="loading"-->
+<!--  >-->
+<!--    <ng-template pTemplate="header">-->
+<!--      <tr>-->
+<!--        <th>-->
+<!--          <p-columnFilter type="text" field="title"></p-columnFilter>-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <th>title</th>-->
+<!--        <th>isbn</th>-->
+<!--        <th>author</th>-->
+<!--        <th>status</th>-->
+<!--      </tr>-->
+<!--    </ng-template>-->
+<!--    <ng-template pTemplate="body" let-book>-->
+<!--      <tr>-->
+<!--        <td>{{ book.title }}</td>-->
+<!--        <td>{{ book.isbn }}</td>-->
+<!--        <td>-->
+<!--          <span *ngFor="let author of book.authors; index as i"-->
+<!--          >{{ author.name-->
+<!--            }}<span *ngIf="i < book.authors.length - 1">, </span></span-->
+<!--          >-->
+<!--        </td>-->
+<!--        <td>{{ book.status.isRented }}</td>-->
+<!--      </tr>-->
+<!--    </ng-template>-->
+<!--    <ng-template pTemplate="summary">-->
+<!--      <div class="flex align-items-center justify-content-between">-->
+<!--        Łączna ilość zasobów: {{ totalRecords }}-->
+<!--      </div>-->
+<!--    </ng-template>-->
+<!--  </p-table>-->
+<!--</div>-->
