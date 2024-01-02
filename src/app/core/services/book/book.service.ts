@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BookResponseDTO } from '../../interfaces/book';
+import { BookCopyRespDTO, BookResponseDTO } from '../../interfaces/book';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +17,16 @@ export class BookService {
       `http://localhost:8080/book/` + book.id,
       book,
       { observe: 'response' },
+    );
+  }
+
+  addCopy(id: string, copies: BookCopyRespDTO[]) {
+    return this.http.post(
+      'http://localhost:8080/book/' + id + '/addcopy',
+      copies,
+      {
+        observe: 'response',
+      },
     );
   }
 }

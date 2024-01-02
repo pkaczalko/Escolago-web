@@ -151,7 +151,7 @@
             </ng-template>
             <ng-template pTemplate="body" let-copy>
               <tr>
-                <td>{{ copy.id }}</td>
+                <td>{{ copy.asset_id.id }}</td>
                 <td>
                   <span *ngIf="copy.rented">
                     <div class="card flex justify-content-center">
@@ -202,6 +202,7 @@
           <ng-template pTemplate="header">
             <div class="dodaj">
               <p-button
+                (click)="addCopy()"
                 label="Dodaj"
                 severity="success"
                 icon="pi pi-plus-circle"

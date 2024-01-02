@@ -1,0 +1,18 @@
+<div class="form">
+  <p>
+    <label for="quantity">Ile egzemplarzy dodać? </label>
+    <p-inputNumber
+      [(ngModel)]="quantity"
+      inputId="quantity"
+      mode="decimal"
+      [min]="1"
+    >
+    </p-inputNumber>
+  </p>
+  <p *ngIf="isVirtual">
+    <label for="link">Ile egzemplarzy dodać?</label>
+    <input pInputText id="link" [(ngModel)]="link" />
+  </p>
+
+  <p-button label="Dodaj" severity="success" (onClick)="close()"></p-button>
+</div>

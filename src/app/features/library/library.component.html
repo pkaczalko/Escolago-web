@@ -1,9 +1,12 @@
 <div class="table">
   <p-table
+    selectionMode="single"
+    [(selection)]="selectedBook"
+    (onRowSelect)="onRowSelect($event)"
     [value]="catalogue"
     [lazy]="true"
     (onLazyLoad)="loadCatalogue($event)"
-    dataKey="isbn"
+    dataKey="id"
     [tableStyle]="{ 'min-width': '75rem' }"
     [paginator]="true"
     [rows]="10"
@@ -24,9 +27,9 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-book>
-      <tr>
+      <tr [pSelectableRow]="book">
         <td>{{ book.book_title }}</td>
-        <td>{{ book.id }}</td>
+        <td>{{ book.isbn }}</td>
         <td>
           {{ book.authors }}
         </td>

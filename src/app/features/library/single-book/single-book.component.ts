@@ -7,12 +7,13 @@ import { ButtonModule } from 'primeng/button';
 import { BookService } from '../../../core/services/book/book.service';
 import {
   BookCopyDTO,
+  BookCopyRespDTO,
   BookInfo,
   BookInfoEdit,
   BookResponseDTO,
 } from '../../../core/interfaces/book';
 import { Shared } from '../../../shared/shared';
-import { CommonModule, NgIf, UpperCasePipe } from '@angular/common';
+import { CommonModule, DatePipe, NgIf, UpperCasePipe } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
@@ -21,6 +22,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { AddCopyComponent } from './add-copy/add-copy.component';
 
 @Component({
   selector: 'app-single-book',
@@ -40,28 +43,33 @@ import { MessageService } from 'primeng/api';
     InputTextModule,
     FormsModule,
   ],
+  providers: [DialogService, DatePipe],
   templateUrl: './single-book.component.html',
   styleUrl: './single-book.component.css',
 })
-export class SingleBookComponent implements OnInit {
+export class SingleBookComponent implements OnInit, OnDestroy {
   id!: string;
   bookData: BookInfo = {} as BookInfo;
+  bookDTO!: BookResponseDTO;
   bookCopies: BookCopyDTO[] = [];
   editMode: boolean = false;
   loading: boolean = false;
   edit!: BookInfoEdit;
+  ref: DynamicDialogRef | undefined;
 
   constructor(
+    public dialogService: DialogService,
     private route: ActivatedRoute,
     private bookService: BookService,
     private messageService: MessageService,
+    private datePipe: DatePipe,
   ) {}
 
   ngOnInit() {
     this.id = <string>this.route.snapshot.paramMap.get('id');
 
     this.bookService.getBook(this.id).subscribe((data) => {
-      console.log(data);
+      this.bookDTO = data;
       this.bookData = {
         ...data,
         authors: Shared.authorsToString(data.authors),
@@ -102,5 +110,50 @@ export class SingleBookComponent implements OnInit {
         });
       });
     }, 500);
+  }
+
+  addCopy() {
+    this.ref = this.dialogService.open(AddCopyComponent, {
+      header: 'Dodaj egzemplarz',
+      data: this.bookData.virtual,
+      width: '25dvw',
+      contentStyle: { 'max-height': '500px', overflow: 'auto' },
+    });
+
+    this.ref.onClose.subscribe((data) => {
+      if (data) {
+        let copy: BookCopyRespDTO = {
+          rented: false,
+          date_added: <string>this.datePipe.transform(Date.now(), 'yyyy-MM-dd'),
+        };
+        if (this.bookData.virtual) {
+          copy.link = data.link;
+        }
+
+        let copies: BookCopyRespDTO[] = [];
+        for (let i = 0; i < data.quantity; i++) {
+          copies.push(copy);
+        }
+        this.bookService
+          .addCopy(this.bookData.id.toString(), copies)
+          .subscribe((res) => {
+            this.bookCopies = [
+              ...this.bookCopies,
+              ...(<BookCopyDTO[]>res.body),
+            ];
+            this.messageService.add({
+              severity: 'info',
+              summary: 'Sukces',
+              detail: 'Dodano egzemplarz',
+            });
+          });
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.ref) {
+      this.ref.close();
+    }
   }
 }

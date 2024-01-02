@@ -13,6 +13,11 @@ export interface BookResponseDTO {
   description: string;
   copies: BookCopyDTO[];
 }
+
+export interface AssetDTO {
+  id: number;
+}
+
 export interface UserDTO {
   id: number;
   name: string;
@@ -42,7 +47,16 @@ export interface BookCopyDTO {
   date_added: Date;
   rented: boolean;
   loan?: LoanDTO;
+  asset_id: AssetDTO;
 }
+export interface BookCopyRespDTO {
+  id?: number;
+  link?: string;
+  date_added: string;
+  rented: boolean;
+  loan?: LoanDTO;
+}
+
 export interface BookInfoEdit {
   id: number;
   authors: string;

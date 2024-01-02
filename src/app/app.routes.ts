@@ -10,5 +10,5 @@ export const routes: Routes = [
   { path: 'library', component: LibraryComponent },
   { path: 'croom', component: CroomComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'library/:id', component: SingleBookComponent },
+  { path: 'book/:id', component: SingleBookComponent },
 ];

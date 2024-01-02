@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
-import { TableLazyLoadEvent, TableModule } from 'primeng/table';
+import {
+  TableLazyLoadEvent,
+  TableModule,
+  TableRowSelectEvent,
+} from 'primeng/table';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CatalogueService } from '../../core/services/catalogue/catalogue.service';
 import { CatalogueDTO, CatalogueTable } from '../../core/interfaces/catalogue';
 import { NgForOf, NgIf } from '@angular/common';
 import { Shared } from '../../shared/shared';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-library',
@@ -16,12 +21,15 @@ import { Shared } from '../../shared/shared';
 })
 export class LibraryComponent {
   catalogue!: CatalogueTable[];
-
+  selectedBook!: CatalogueTable;
   totalRecords!: number;
 
   loading: boolean = false;
 
-  constructor(private catalogueService: CatalogueService) {}
+  constructor(
+    private catalogueService: CatalogueService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.loading = true;
@@ -51,5 +59,10 @@ export class LibraryComponent {
       } as CatalogueTable);
     });
     return table;
+  }
+
+  onRowSelect(event: TableRowSelectEvent) {
+    console.log(event.data);
+    this.router.navigate(['/book', event.data.id]);
   }
 }
