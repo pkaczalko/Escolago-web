@@ -1,0 +1,14 @@
+<div class="form">
+  <p>
+    <label for="userID">Ile egzemplarzy dodać? </label>
+    <p-inputNumber
+      [(ngModel)]="user_id"
+      inputId="userId"
+      mode="decimal"
+      [min]="0"
+    >
+    </p-inputNumber>
+  </p>
+
+  <p-button label="Wypożycz" severity="success" (onClick)="close()"></p-button>
+</div>

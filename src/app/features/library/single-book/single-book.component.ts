@@ -24,11 +24,13 @@ import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AddCopyComponent } from './add-copy/add-copy.component';
+import {RentFormComponent} from "./rent-form/rent-form.component";
 
 @Component({
   selector: 'app-single-book',
   standalone: true,
   imports: [
+    RentFormComponent,
     CardModule,
     DividerModule,
     TableModule,
@@ -141,6 +143,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
               ...this.bookCopies,
               ...(<BookCopyDTO[]>res.body),
             ];
+            this.bookData.copies = this.bookCopies;
             this.messageService.add({
               severity: 'info',
               summary: 'Sukces',
@@ -151,9 +154,37 @@ export class SingleBookComponent implements OnInit, OnDestroy {
     });
   }
 
+  returnCopy(copy: BookCopyDTO) {
+    if(copy.loan?.id) {
+      let loan_id = copy.loan.id;
+      this.bookService.returnCopy(loan_id,copy).subscribe();
+    }
+  }
+
+  rentCopy(copy: BookCopyDTO) {
+    this.ref = this.dialogService.open(RentFormComponent, {
+      header: 'Wypożycz',
+      width: '25dvw',
+      contentStyle: { 'max-height': '500px', overflow: 'auto' },
+    });
+
+    this.ref.onClose.subscribe(data=>{
+      console.log(data)
+      if(data){
+
+        console.log(this.bookService.rentCopy(data,copy).subscribe());
+
+      }
+
+      }
+    );
+  }
+
+
   ngOnDestroy() {
     if (this.ref) {
       this.ref.close();
     }
   }
+
 }

@@ -191,8 +191,31 @@
                 </td>
                 <td>{{ copy.date_added }}</td>
                 <td>
-                  <span *ngIf="copy.rented"><button>zwróc</button></span>
-                  <span *ngIf="!copy.rented"><button>wypożycz</button></span>
+                  <span *ngIf="copy.rented">
+
+                    <p-button
+                    label="Zwróć"
+                    size="small"
+                    severity="info"
+                    (onClick)="returnCopy(copy)"
+                    >
+                    </p-button>
+
+                  </span>
+                  <span *ngIf="!copy.rented">
+
+                    <button>wypożycz</button>
+                    <p-button
+                      label="Wypożycz"
+                      size="small"
+                      severity="info"
+                      (onClick)="rentCopy(copy)"
+                    >
+                    </p-button>
+
+                  </span>
+
+
                   <button>usuń</button>
                 </td>
               </tr>

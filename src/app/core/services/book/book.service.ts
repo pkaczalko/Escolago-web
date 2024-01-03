@@ -1,12 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BookCopyRespDTO, BookResponseDTO } from '../../interfaces/book';
+import {BookCopyDTO, BookCopyRespDTO, BookResponseDTO} from '../../interfaces/book';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookService {
   constructor(private http: HttpClient) {}
+
+  rentCopy(user_id:number,copy:BookCopyDTO){
+    return this.http.put<BookCopyDTO>('http://localhost:8080/book/rent/'+user_id,copy)
+  }
+
+  returnCopy(loan_id:number,copy:BookCopyDTO){
+    console.log(copy);
+    return this.http.put<BookCopyDTO>('http://localhost:8080/book/return/'+loan_id,copy);
+  }
 
   public getBook(id: string) {
     return this.http.get<BookResponseDTO>(`http://localhost:8080/book/` + id);
