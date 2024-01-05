@@ -14,3 +14,23 @@ body {
     flex-direction: row-reverse;
   }
 }
+
+
+.pbutton{
+  & p-button {
+    margin-left: 2px;
+  }
+}
+
+
+.uploadButton{
+  font-size: 12px;
+  width:auto;
+  height: 2rem;
+  margin:0.25rem;
+}
+
+.uploadStyleClass{
+  width:auto;
+  }
+

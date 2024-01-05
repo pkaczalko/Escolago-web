@@ -59,8 +59,8 @@ export interface BookCopyRespDTO {
 
 export interface BookInfoEdit {
   id: number;
-  authors: string;
-  genres: string;
+  authors: string[];
+  genres: string[];
   isbn: string;
   book_title: string;
   published_year: number;

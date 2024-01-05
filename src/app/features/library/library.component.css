@@ -1,0 +1,12 @@
+.table{
+  display: flex;
+  flex-direction: column;
+
+  .button-add{
+    margin:0.5rem;
+    display:flex;
+    justify-content: flex-end;
+  }
+}
+
+

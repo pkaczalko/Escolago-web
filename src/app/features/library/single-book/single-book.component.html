@@ -1,239 +1,281 @@
+<p-confirmDialog></p-confirmDialog>
 <div class="singleBody">
-  <div class="col1">
-    <img class="okładka" src="{{ bookData.cover }}" alt="okładka" />
+  <div class="row">
+    <div class="usuń">
+      <p-button
+        size="small"
+        label="Usuń"
+        severity="danger"
+        icon="pi pi-trash"
+        (onClick)="deleteBook()"
+      >
+      </p-button>
+    </div>
+    <div class="edytuj">
+      <p-button
+        *ngIf="!editMode"
+        (onClick)="editBookInfo()"
+        label="Edytuj"
+        icon="pi pi-file-edit"
+        size="small"
+      ></p-button>
+      <p-button
+        *ngIf="editMode"
+        [loading]="loading"
+        (onClick)="saveChanges()"
+        label="Zapisz"
+        icon="pi pi-check"
+        size="small"
+        severity="success"
+      ></p-button>
+    </div>
   </div>
-  <div class="col2">
-    <div class="col2.1">
-      <div class="tytul">
-        <p-card
-          *ngIf="!editMode"
-          header="{{ bookData.book_title }}"
-          subheader="isbn: {{ bookData.isbn }}"
-          styleClass="pcardHeader"
-        >
-          {{ bookData.authors }}
-          <ng-template pTemplate="header">
-            <div class="edytuj">
-              <p-button
-                (onClick)="editBookInfo()"
-                label="Edytuj"
-                icon="pi pi-file-edit"
-                size="small"
-              ></p-button>
-            </div>
-          </ng-template>
-        </p-card>
-        <p-card *ngIf="editMode" styleClass="pcardHeader">
-          <div class="editBlock">
-            <p>
-              Tytuł:
-              <input type="text" pInputText [(ngModel)]="edit.book_title" />
-            </p>
-            <p>
-              ISBN: <input type="text" pInputText [(ngModel)]="edit.isbn" />
-            </p>
-            <p>
-              Autor:
-              <input type="text" pInputText [(ngModel)]="edit.authors" />
-            </p>
-          </div>
-          <ng-template pTemplate="header">
-            <div class="edytuj">
-              <p-button
-                [loading]="loading"
-                (onClick)="saveChanges()"
-                label="Zapisz"
-                icon="pi pi-check"
-                size="small"
-                severity="success"
-              ></p-button>
-            </div>
-          </ng-template>
-        </p-card>
+  <div class="row">
+    <div class="col1">
+      <div class="okładka">
+        <img class="okładka" src="{{ bookFront.cover }}" alt="okładka" />
       </div>
     </div>
-
-    <p-divider></p-divider>
-    <div class="col2.2">
-      <div class="info">
-        <p-card header="Informacje">
-          <p>
-            Wydawnictwo: <b *ngIf="!editMode">{{ bookData.publisher }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.publisher"
-            />
-          </p>
-          <p>
-            Rok wydania: <b *ngIf="!editMode">{{ bookData.published_year }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.published_year"
-            />
-          </p>
-
-          <p>
-            Gatunek: <b *ngIf="!editMode">{{ bookData.genres }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.genres"
-            />
-          </p>
-          <p>
-            Stron: <b *ngIf="!editMode">{{ bookData.pages }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.pages"
-            />
-          </p>
-          <p>
-            Język: <b *ngIf="!editMode">{{ bookData.language | uppercase }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.language"
-            />
-          </p>
-          <p>
-            Typ: <b *ngIf="!editMode">{{ bookData.type }}</b>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.type"
-            />
-          </p>
-          <p *ngIf="bookData.virtual">
-            link:
-            <a href="{{ bookData.copies[0].link }}">{{
-              bookData.copies[0].link
-            }}</a>
-          </p>
-          <p>
-            Opis: <span *ngIf="!editMode">{{ bookData.description }}</span>
-            <input
-              *ngIf="editMode"
-              type="text"
-              pInputText
-              [(ngModel)]="edit.description"
-            />
-          </p>
-        </p-card>
-      </div>
-    </div>
-    <p-divider></p-divider>
-    <div class="col2.3">
-      <div class="kopie">
-        <p-card header="Dostępne egzemplarze" styleClass="pcardHeader">
-          <p-table
-            [value]="bookCopies"
-            dataKey="id"
-            [scrollable]="true"
-            scrollHeight="400px"
-            [tableStyle]="{ 'min-width': '50rem' }"
+    <div class="col2">
+      <div class="col2.1">
+        <div class="tytul">
+          <p-card
+            *ngIf="!editMode"
+            header="{{ bookFront.book_title }}"
+            subheader="isbn: {{ bookFront.isbn }}"
+            styleClass="pcardHeader"
           >
-            <ng-template pTemplate="header">
-              <tr>
-                <th>Nr inwentarza</th>
-                <th>Stan</th>
-                <th>Data dodania</th>
-                <th>Akcje</th>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-copy>
-              <tr>
-                <td>{{ copy.asset_id.id }}</td>
-                <td>
-                  <span *ngIf="copy.rented">
-                    <div class="card flex justify-content-center">
-                      <p-overlayPanel #op>
-                        <p>
-                          id użytkownika: <b>{{ copy.loan.user.id }}</b>
-                        </p>
-                        <p>
-                          imię i nazwisko wypożyczającego:
-                          <b
-                            >{{ copy.loan.user.name }}
-                            {{ copy.loan.user.surname }}</b
-                          >
-                        </p>
-                        <p>
-                          data wypożyczenia: <b>{{ copy.loan.dateOfRental }}</b>
-                        </p>
-                      </p-overlayPanel>
-                      <p-button
-                        size="small"
-                        (click)="op.toggle($event)"
-                        label="Wypożyczony"
-                        [text]="true"
-                        severity="danger"
-                      ></p-button>
-                    </div>
-                  </span>
-                  <span *ngIf="!copy.rented"
-                    ><p-button
-                      size="small"
-                      label="Dostępny"
-                      [disabled]="true"
-                      [text]="true"
-                      severity="success"
-                    ></p-button
-                  ></span>
-                </td>
-                <td>{{ copy.date_added }}</td>
-                <td>
-                  <span *ngIf="copy.rented">
-
-                    <p-button
-                    label="Zwróć"
-                    size="small"
-                    severity="info"
-                    (onClick)="returnCopy(copy)"
-                    >
-                    </p-button>
-
-                  </span>
-                  <span *ngIf="!copy.rented">
-
-                    <button>wypożycz</button>
-                    <p-button
-                      label="Wypożycz"
-                      size="small"
-                      severity="info"
-                      (onClick)="rentCopy(copy)"
-                    >
-                    </p-button>
-
-                  </span>
-
-
-                  <button>usuń</button>
-                </td>
-              </tr>
-            </ng-template>
-          </p-table>
-
-          <ng-template pTemplate="header">
-            <div class="dodaj">
-              <p-button
-                (click)="addCopy()"
-                label="Dodaj"
-                severity="success"
-                icon="pi pi-plus-circle"
-                size="small"
-              ></p-button>
+            {{ bookFront.authors }}
+          </p-card>
+          <p-card *ngIf="editMode" styleClass="pcardHeader">
+            <div class="editBlock">
+              <p>
+                Tytuł:
+                <input type="text" pInputText [(ngModel)]="edit.book_title" />
+                <span style="color: red" *ngIf="edit.book_title.length < 1">
+                  Pole nie może być puste!</span
+                >
+              </p>
+              <p>
+                ISBN:
+                <input type="text" pInputText [(ngModel)]="edit.isbn" />
+                <span style="color: red" *ngIf="edit.isbn.length < 1">
+                  Pole nie może być puste!</span
+                >
+              </p>
+              <p>
+                Autor:
+                <p-chips [(ngModel)]="edit.authors" separator=","></p-chips>
+                <span style="color: red" *ngIf="edit.authors.length < 1">
+                  Pole nie może być puste!</span
+                >
+                <!--              <input type="text" pInputText [(ngModel)]="edit.authors" />-->
+              </p>
             </div>
-          </ng-template>
-        </p-card>
+            <ng-template pTemplate="header">
+              <div class="edytuj"></div>
+            </ng-template>
+          </p-card>
+        </div>
+      </div>
+
+      <p-divider></p-divider>
+      <div class="col2.2">
+        <div class="info">
+          <p-card header="Informacje">
+            <p>
+              Wydawnictwo: <b *ngIf="!editMode">{{ bookFront.publisher }}</b>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.publisher"
+              />
+            </p>
+            <p>
+              Rok wydania:
+              <b *ngIf="!editMode">{{ bookFront.published_year }}</b>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.published_year"
+              />
+            </p>
+
+            <p>
+              Gatunek: <b *ngIf="!editMode">{{ bookFront.genres }}</b>
+              <p-chips
+                *ngIf="editMode"
+                [(ngModel)]="edit.genres"
+                separator=","
+              ></p-chips>
+            </p>
+            <p>
+              Stron: <b *ngIf="!editMode">{{ bookFront.pages }}</b>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.pages"
+              />
+            </p>
+            <p>
+              Język:
+              <b *ngIf="!editMode">{{ bookFront.language | uppercase }}</b>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.language"
+              />
+            </p>
+            <p>
+              Typ: <b *ngIf="!editMode">{{ bookFront.type }}</b>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.type"
+              />
+            </p>
+            <p *ngIf="bookFront.virtual">
+              link:
+              <a href="{{ bookFront.copies[0].link }}">{{
+                bookFront.copies[0].link
+              }}</a>
+            </p>
+            <p>
+              Opis: <span *ngIf="!editMode">{{ bookFront.description }}</span>
+              <input
+                *ngIf="editMode"
+                type="text"
+                pInputText
+                [(ngModel)]="edit.description"
+              />
+            </p>
+          </p-card>
+        </div>
+      </div>
+      <p-divider></p-divider>
+      <div class="col2.3">
+        <div class="kopie">
+          <p-card header="Dostępne egzemplarze" styleClass="pcardHeader">
+            <p-table
+              [value]="bookCopies"
+              dataKey="id"
+              [scrollable]="true"
+              scrollHeight="400px"
+              [tableStyle]="{ 'min-width': '50rem' }"
+            >
+              <ng-template pTemplate="header">
+                <tr>
+                  <th pSortableColumn="asset_id.id">
+                    Nr inwentarza<p-sortIcon field="asset_id.id"></p-sortIcon>
+                  </th>
+                  <th pSortableColumn="rented">
+                    Stan<p-sortIcon field="rented"></p-sortIcon>
+                  </th>
+                  <th pSortableColumn="date_added">
+                    Data dodania<p-sortIcon field="date_added"></p-sortIcon>
+                  </th>
+                  <th>Akcje</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-copy>
+                <tr>
+                  <td>{{ copy.asset_id.id }}</td>
+                  <td>
+                    <span *ngIf="copy.rented">
+                      <div class="card flex justify-content-center">
+                        <p-overlayPanel #op>
+                          <p>
+                            id użytkownika: <b>{{ copy.loan.user.id }}</b>
+                          </p>
+                          <p>
+                            imię i nazwisko wypożyczającego:
+                            <b
+                              >{{ copy.loan.user.name }}
+                              {{ copy.loan.user.surname }}</b
+                            >
+                          </p>
+                          <p>
+                            data wypożyczenia:
+                            <b>{{ copy.loan.dateOfRental }}</b>
+                          </p>
+                        </p-overlayPanel>
+                        <p-button
+                          size="small"
+                          (click)="op.toggle($event)"
+                          label="Wypożyczony"
+                          [text]="true"
+                          severity="danger"
+                        ></p-button>
+                      </div>
+                    </span>
+                    <span *ngIf="!copy.rented"
+                      ><p-button
+                        size="small"
+                        label="Dostępny"
+                        [disabled]="true"
+                        [text]="true"
+                        severity="success"
+                      ></p-button
+                    ></span>
+                  </td>
+                  <td>{{ copy.date_added }}</td>
+                  <td>
+                    <span *ngIf="copy.rented">
+                      <p-button
+                        label="Zwróć"
+                        size="small"
+                        severity="warning"
+                        icon="pi pi-undo"
+                        (onClick)="returnCopy(copy)"
+                        styleClass="uploadButton"
+                      >
+                      </p-button>
+                    </span>
+                    <span *ngIf="!copy.rented">
+                      <p-button
+                        label="Wypożycz"
+                        size="small"
+                        severity="info"
+                        (onClick)="rentCopy(copy)"
+                        styleClass="uploadButton"
+                        icon="pi pi-stopwatch"
+                      >
+                      </p-button>
+                    </span>
+
+                    <p-button
+                      [style]="{ 'margin-left': '1rem' }"
+                      label="Usuń"
+                      icon="pi pi-trash"
+                      size="small"
+                      severity="danger"
+                      (onClick)="deleteCopy(copy)"
+                      styleClass="uploadButton"
+                    >
+                    </p-button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+            <ng-template pTemplate="header">
+              <div class="dodaj">
+                <p-button
+                  (click)="addCopy()"
+                  label="Dodaj"
+                  severity="success"
+                  icon="pi pi-plus-circle"
+                  size="small"
+                ></p-button>
+              </div>
+            </ng-template>
+          </p-card>
+        </div>
       </div>
     </div>
   </div>

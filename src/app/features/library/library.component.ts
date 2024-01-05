@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { LazyLoadEvent } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
+import {
+  ConfirmationService,
+  LazyLoadEvent,
+  MessageService,
+} from 'primeng/api';
 import {
   TableLazyLoadEvent,
   TableModule,
@@ -8,27 +12,52 @@ import {
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CatalogueService } from '../../core/services/catalogue/catalogue.service';
 import { CatalogueDTO, CatalogueTable } from '../../core/interfaces/catalogue';
-import { NgForOf, NgIf } from '@angular/common';
+import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { Shared } from '../../shared/shared';
 import { Router, RouterOutlet } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { AddBookComponent } from './add-book/add-book.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import {
+  BookCopyDTO,
+  BookCopyRespDTO,
+  BookResponseDTO,
+} from '../../core/interfaces/book';
+import { BookService } from '../../core/services/book/book.service';
+import { AddCopyComponent } from './single-book/add-copy/add-copy.component';
 
 @Component({
   selector: 'app-library',
   standalone: true,
-  imports: [TableModule, MultiSelectModule, NgForOf, NgIf],
+  imports: [
+    TableModule,
+    MultiSelectModule,
+    NgForOf,
+    NgIf,
+    ButtonModule,
+    ConfirmDialogModule,
+  ],
   templateUrl: './library.component.html',
   styleUrl: './library.component.css',
+  providers: [DialogService, ConfirmationService, DatePipe],
 })
-export class LibraryComponent {
+export class LibraryComponent implements OnInit {
   catalogue!: CatalogueTable[];
   selectedBook!: CatalogueTable;
   totalRecords!: number;
-
+  ref: DynamicDialogRef | undefined;
   loading: boolean = false;
+  newBook!: BookResponseDTO;
 
   constructor(
     private catalogueService: CatalogueService,
+    private bookService: BookService,
     private router: Router,
+    private dialogService: DialogService,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService,
+    private datePipe: DatePipe,
   ) {}
 
   ngOnInit() {
@@ -62,7 +91,91 @@ export class LibraryComponent {
   }
 
   onRowSelect(event: TableRowSelectEvent) {
-    console.log(event.data);
     this.router.navigate(['/book', event.data.id]);
+  }
+
+  addBook() {
+    this.ref = this.dialogService.open(AddBookComponent, {
+      header: 'Dodaj nową książkę',
+      width: '35dvw',
+      contentStyle: { 'max-height': 'auto', overflow: 'auto' },
+    });
+    this.ref.onClose.subscribe((res) => {
+      if (res) {
+        this.bookService.addBook(res).subscribe({
+          next: (data) => {
+            this.newBook = data;
+          },
+          error: (err) => {
+            if (err.status == 400) {
+              this.messageService.add({
+                severity: 'error',
+                summary: 'Błąd',
+                detail: 'Książka o podanym ISBN już istnieje',
+              });
+            }
+          },
+          complete: () => {
+            this.copyConfDialog();
+          },
+        });
+      }
+    });
+  }
+
+  copyConfDialog() {
+    this.confirmationService.confirm({
+      message: 'Czy chcesz dodać egzemplarze tej książki?',
+      header: 'Egzemplarze',
+      acceptLabel: 'Tak',
+      rejectLabel: 'Nie',
+      accept: () => {
+        this.ref = this.dialogService.open(AddCopyComponent, {
+          header: 'Dodaj kopie',
+          width: '35vw',
+          contentStyle: { 'max-height': 'auto', overflow: 'auto' },
+          data: this.newBook.id,
+        });
+
+        this.ref.onClose.subscribe({
+          next: (data) => {
+            if (data) {
+              let copy: BookCopyRespDTO = {
+                rented: false,
+                date_added: <string>(
+                  this.datePipe.transform(Date.now(), 'yyyy-MM-dd')
+                ),
+              };
+              if (this.newBook.virtual) {
+                copy.link = data.link;
+              }
+
+              let copies: BookCopyRespDTO[] = [];
+              for (let i = 0; i < data.quantity; i++) {
+                copies.push(copy);
+              }
+              this.bookService
+                .addCopy(this.newBook.id.toString(), copies)
+                .subscribe((res) => {
+                  this.messageService.add({
+                    severity: 'success',
+                    summary: 'Sukces',
+                    detail: 'Dodano egzemplarze książki',
+                  });
+                });
+            }
+          },
+          error: (err) => {},
+          complete: () => {},
+        });
+      },
+      reject: () => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Sukces',
+          detail: 'Dodano książkę',
+        });
+      },
+    });
   }
 }

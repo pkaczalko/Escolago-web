@@ -1,4 +1,14 @@
+<p-confirmDialog></p-confirmDialog>
 <div class="table">
+  <div class="button-add">
+    <p-button
+      severity="success"
+      size="small"
+      (onClick)="addBook()"
+      label="Dodaj"
+      icon="pi pi-plus"
+    ></p-button>
+  </div>
   <p-table
     selectionMode="single"
     [(selection)]="selectedBook"

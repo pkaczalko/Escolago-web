@@ -1,4 +1,9 @@
-import { AuthorDTO, GenreDTO } from '../core/interfaces/book';
+import {
+  AuthorDTO,
+  BookCopyDTO,
+  BookCopyRespDTO,
+  GenreDTO,
+} from '../core/interfaces/book';
 
 export class Shared {
   static generesToString(genres: GenreDTO[]): string {
@@ -12,7 +17,7 @@ export class Shared {
     else return '';
   }
 
-  private static tableToString(table: any[]): string {
+  static tableToString(table: any[]): string {
     let tableString = '';
     for (let item of table) {
       tableString += item;
@@ -22,10 +27,10 @@ export class Shared {
   }
 
   private static StringToTable(string: string): string[] {
-    return string.split(', ');
+    return string.split(',');
   }
 
-  static TableToAuthors(string: string): AuthorDTO[] {
+  static StringToAuthors(string: string): AuthorDTO[] {
     let table = this.StringToTable(string);
     let authors: AuthorDTO[] = [];
     for (let author of table) {
@@ -34,12 +39,59 @@ export class Shared {
     return authors;
   }
 
-  static TabletoGenres(string: string): GenreDTO[] {
+  static TableToAuthors(table: string[]): AuthorDTO[] {
+    let authors: AuthorDTO[] = [];
+    for (let author of table) {
+      authors.push({ name: author } as AuthorDTO);
+    }
+    return authors;
+  }
+
+  static TableToGenres(table: string[]): GenreDTO[] {
+    let genres: GenreDTO[] = [];
+    for (let genre of table) {
+      genres.push({ name: genre } as GenreDTO);
+    }
+    return genres;
+  }
+
+  static StringtoGenres(string: string): GenreDTO[] {
     let table = this.StringToTable(string);
     let genres: GenreDTO[] = [];
     for (let genre of table) {
       genres.push({ name: genre } as GenreDTO);
     }
     return genres;
+  }
+
+  static DTOtoResponse(DTOtable: any[], newTable: any[]) {
+    console.log(DTOtable, newTable);
+    if (DTOtable === newTable) {
+      return DTOtable;
+    }
+    let response: any[] = [];
+    let responseItem!: any;
+    newTable.forEach((search) => {
+      responseItem = {};
+      let found = DTOtable.find(
+        (searchDTO) =>
+          this.removeSpaces(searchDTO.name) == this.removeSpaces(search.name),
+      );
+      if (found) {
+        responseItem.id = found.id;
+        responseItem.name = found.name;
+        if (found.englishName) {
+          responseItem['englishName'] = found.englishName;
+        }
+      } else {
+        responseItem.name = search.name.trim();
+      }
+      response.push(responseItem);
+    });
+    return response;
+  }
+
+  private static removeSpaces(string: string): string {
+    return string.replace(/\s/g, '');
   }
 }

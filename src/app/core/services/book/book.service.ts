@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {BookCopyDTO, BookCopyRespDTO, BookResponseDTO} from '../../interfaces/book';
+import {
+  BookCopyDTO,
+  BookCopyRespDTO,
+  BookResponseDTO,
+} from '../../interfaces/book';
+import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,13 +13,19 @@ import {BookCopyDTO, BookCopyRespDTO, BookResponseDTO} from '../../interfaces/bo
 export class BookService {
   constructor(private http: HttpClient) {}
 
-  rentCopy(user_id:number,copy:BookCopyDTO){
-    return this.http.put<BookCopyDTO>('http://localhost:8080/book/rent/'+user_id,copy)
+  rentCopy(user_id: number, copy: BookCopyDTO) {
+    return this.http.put<BookCopyDTO>(
+      'http://localhost:8080/book/rent/' + user_id,
+      copy,
+      { observe: 'response' },
+    );
   }
 
-  returnCopy(loan_id:number,copy:BookCopyDTO){
-    console.log(copy);
-    return this.http.put<BookCopyDTO>('http://localhost:8080/book/return/'+loan_id,copy);
+  returnCopy(loan_id: number, copy: BookCopyDTO) {
+    return this.http.put<BookCopyDTO>(
+      'http://localhost:8080/book/return/' + loan_id,
+      copy,
+    );
   }
 
   public getBook(id: string) {
@@ -37,5 +48,32 @@ export class BookService {
         observe: 'response',
       },
     );
+  }
+
+  deleteCopy(id: string) {
+    return this.http.delete('http://localhost:8080/book/copy/delete/' + id);
+  }
+
+  findAuthor(name: string) {
+    return this.http.get(
+      'http://localhost:8080/author/' + name.trim().replace(' ', '+'),
+    );
+  }
+
+  findGenre(name: string) {
+    return this.http.get(
+      'http://localhost:8080/genre/' + name.trim().replace(' ', '+'),
+    );
+  }
+
+  addBook(book: BookResponseDTO) {
+    return this.http.post<BookResponseDTO>(
+      'http://localhost:8080/book/add',
+      book,
+    );
+  }
+
+  deleteBook(id: string) {
+    return this.http.delete('http://localhost:8080/book/delete/' + id);
   }
 }
