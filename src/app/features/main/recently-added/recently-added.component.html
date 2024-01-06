@@ -1,23 +1,31 @@
 <div class="recently">
   <h2>Ostatnio dodane</h2>
-  <p-table [value]="items" [scrollable]="true" scrollHeight="400px">
-
+  <p-table
+    selectionMode="single"
+    (onRowSelect)="onRowSelect($event)"
+    [value]="tableData"
+    [scrollable]="true"
+    [tableStyle]="{
+      'max-height': '24dvh',
+      'overflow-y': 'scrool'
+    }"
+    styleClass="p-datatable-sm"
+  >
     <ng-template pTemplate="header">
       <tr>
         <th>Nazwa</th>
         <th>Moduł</th>
-        <th>Numer</th>
-        <th>Data</th>
+        <th>Numer zasobu</th>
+        <th>Data dodania</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-item>
-      <tr>
-        <td>{{ item.nazwa }}</td>
-        <td>{{ item.modul }}</td>
-        <td>{{ item.numer }}</td>
-        <td>{{ item.data }}</td>
+      <tr [pSelectableRow]="item">
+        <td>{{ item.name }}</td>
+        <td>{{ item.module }}</td>
+        <td>{{ item.assetId }}</td>
+        <td>{{ item.dateAdded }}</td>
       </tr>
     </ng-template>
   </p-table>
-
 </div>

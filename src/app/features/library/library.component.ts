@@ -12,7 +12,7 @@ import {
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CatalogueService } from '../../core/services/catalogue/catalogue.service';
 import { CatalogueDTO, CatalogueTable } from '../../core/interfaces/catalogue';
-import { DatePipe, NgForOf, NgIf } from '@angular/common';
+import { DatePipe, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { Shared } from '../../shared/shared';
 import { Router, RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
@@ -26,6 +26,10 @@ import {
 } from '../../core/interfaces/book';
 import { BookService } from '../../core/services/book/book.service';
 import { AddCopyComponent } from './single-book/add-copy/add-copy.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { FormsModule } from '@angular/forms';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @Component({
   selector: 'app-library',
@@ -37,6 +41,11 @@ import { AddCopyComponent } from './single-book/add-copy/add-copy.component';
     NgIf,
     ButtonModule,
     ConfirmDialogModule,
+    InputTextModule,
+    InputGroupModule,
+    NgStyle,
+    FormsModule,
+    RadioButtonModule,
   ],
   templateUrl: './library.component.html',
   styleUrl: './library.component.css',
@@ -49,6 +58,16 @@ export class LibraryComponent implements OnInit {
   ref: DynamicDialogRef | undefined;
   loading: boolean = false;
   newBook!: BookResponseDTO;
+  searchValue: string = '';
+  selectedAction: any = null;
+  first = 0;
+  actions: any[] = [
+    { name: 'Tytuł', key: 'title' },
+    { name: 'ISBN', key: 'isbn' },
+    { name: 'Autor', key: 'author' },
+    { name: 'Gatunek', key: 'genre' },
+    { name: 'Numer zasobu', key: 'asset' },
+  ];
 
   constructor(
     private catalogueService: CatalogueService,
@@ -64,11 +83,15 @@ export class LibraryComponent implements OnInit {
     this.loading = true;
   }
 
-  loadCatalogue(event: TableLazyLoadEvent) {
+  tableLoad(event: TableLazyLoadEvent) {
+    this.loadCatalogue((event.first || 0) / 10 || 0);
+  }
+
+  loadCatalogue(page: number) {
     this.loading = true;
     setTimeout(() => {
       this.catalogueService
-        .getCatalogue((event.first || 0) / 10 || 0)
+        .getCatalogue(page, this.searchValue, this.selectedAction?.key ?? '')
         .subscribe((res) => {
           this.catalogue = this.prepareData(res.catalogue);
           this.totalRecords = res.totalCount;
@@ -177,5 +200,10 @@ export class LibraryComponent implements OnInit {
         });
       },
     });
+  }
+
+  searchCatalogue() {
+    this.first = 0;
+    this.loadCatalogue(0);
   }
 }

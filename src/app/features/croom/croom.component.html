@@ -1,45 +1,108 @@
-<!--<div class="table">-->
-<!--  <p-table-->
-<!--    [value]="catalogue"-->
-<!--    [lazy]="true"-->
-<!--    (onLazyLoad)="loadCatalogue($event)"-->
-<!--    dataKey="isbn"-->
-<!--    [tableStyle]="{ 'min-width': '75rem' }"-->
-<!--    [paginator]="true"-->
-<!--    [rows]="10"-->
-<!--    [totalRecords]="totalRecords"-->
-<!--    [loading]="loading"-->
-<!--  >-->
-<!--    <ng-template pTemplate="header">-->
-<!--      <tr>-->
-<!--        <th>-->
-<!--          <p-columnFilter type="text" field="title"></p-columnFilter>-->
-<!--        </th>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <th>title</th>-->
-<!--        <th>isbn</th>-->
-<!--        <th>author</th>-->
-<!--        <th>status</th>-->
-<!--      </tr>-->
-<!--    </ng-template>-->
-<!--    <ng-template pTemplate="body" let-book>-->
-<!--      <tr>-->
-<!--        <td>{{ book.title }}</td>-->
-<!--        <td>{{ book.isbn }}</td>-->
-<!--        <td>-->
-<!--          <span *ngFor="let author of book.authors; index as i"-->
-<!--          >{{ author.name-->
-<!--            }}<span *ngIf="i < book.authors.length - 1">, </span></span-->
-<!--          >-->
-<!--        </td>-->
-<!--        <td>{{ book.status.isRented }}</td>-->
-<!--      </tr>-->
-<!--    </ng-template>-->
-<!--    <ng-template pTemplate="summary">-->
-<!--      <div class="flex align-items-center justify-content-between">-->
-<!--        Łączna ilość zasobów: {{ totalRecords }}-->
-<!--      </div>-->
-<!--    </ng-template>-->
-<!--  </p-table>-->
-<!--</div>-->
+<p-confirmDialog></p-confirmDialog>
+<div class="table">
+  <div class="header">
+    <div class="col">
+      <div class="search">
+        <p-inputGroup>
+          <span class="p-input-icon-left inputSearch">
+            <i class="pi pi-search"></i>
+            <input
+              (keyup.enter)="searchCatalogue()"
+              [(ngModel)]="searchValue"
+              class="inputSearch"
+              [ngStyle]="{
+                'border-bottom-right-radius': 0,
+                'border-top-right-radius': 0
+              }"
+              pInputText
+              type="text"
+            />
+          </span>
+          <button
+            type="button"
+            pButton
+            icon="pi pi-search"
+            class="p-button-info"
+            (click)="searchCatalogue()"
+          ></button>
+        </p-inputGroup>
+        <div
+          [ngStyle]="{
+            display: 'flex',
+            margin: '10px',
+            width: '100%',
+            'justify-content': 'center'
+          }"
+        >
+          <div *ngFor="let action of actions" class="field-checkbox">
+            <p-radioButton
+              [inputId]="action.key"
+              name="category"
+              [value]="action"
+              [(ngModel)]="selectedAction"
+            ></p-radioButton>
+            <label
+              [for]="action.key"
+              [ngStyle]="{ margin: '0 0.5rem 0 0.25rem' }"
+              class="ml-2"
+              >{{ action.name }}</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="add">
+        <p-button
+          severity="success"
+          size="small"
+          (onClick)="addBook()"
+          label="Dodaj"
+          icon="pi pi-plus"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+  <p-table
+    [(first)]="first"
+    selectionMode="single"
+    [(selection)]="selectedBook"
+    (onRowSelect)="onRowSelect($event)"
+    [value]="catalogue"
+    [lazy]="true"
+    (onLazyLoad)="tableLoad($event)"
+    dataKey="id"
+    [tableStyle]="{ 'min-width': '75rem', 'min-height': '22rem' }"
+    [paginator]="true"
+    [rows]="10"
+    [totalRecords]="totalRecords"
+    [loading]="loading"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Tytuł</th>
+        <th>Isbn</th>
+        <th>Autor</th>
+        <th>Gatunek</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-book>
+      <tr [pSelectableRow]="book" [style]="{ 'max-height': '5dvh' }">
+        <td>{{ book.book_title }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>
+          {{ book.authors }}
+        </td>
+        <td>{{ book.genres }}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td style="text-align: center" colspan="4">Nie znaleziono</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+        <span> Łączna ilość: {{ totalRecords }} </span>
+      </div>
+    </ng-template>
+  </p-table>
+</div>

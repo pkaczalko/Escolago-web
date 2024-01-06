@@ -58,7 +58,12 @@
               </p>
               <p>
                 ISBN:
-                <input type="text" pInputText [(ngModel)]="edit.isbn" />
+                <p-inputMask
+                  slotChar=""
+                  [autoClear]="false"
+                  mask="9999999999999"
+                  [(ngModel)]="edit.isbn"
+                ></p-inputMask>
                 <span style="color: red" *ngIf="edit.isbn.length < 1">
                   Pole nie może być puste!</span
                 >

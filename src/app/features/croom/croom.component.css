@@ -1,0 +1,37 @@
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col{
+  width:100%;
+  margin:auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search{
+  width: 45%;
+  margin-left:26.5%;
+
+  .inputSearch{
+    width:100%;
+  }
+
+
+}
+
+.add{
+  margin-right:1rem;
+}
+
+

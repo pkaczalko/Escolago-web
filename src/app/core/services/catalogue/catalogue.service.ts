@@ -10,9 +10,15 @@ import { Shared } from '../../../shared/shared';
 export class CatalogueService {
   constructor(private http: HttpClient) {}
 
-  getCatalogue(page: number) {
+  getCatalogue(page: number = 0, search: string = '', action: string = '') {
+    search = search.trim().replace(' ', '+');
     return this.http.get<CatalogueResponse>(
-      `http://localhost:8080/catalogue?page=` + page,
+      `http://localhost:8080/catalogue?page=` +
+        page +
+        `&search=` +
+        search +
+        `&action=` +
+        action,
     );
   }
 }

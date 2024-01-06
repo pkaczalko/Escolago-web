@@ -1,3 +1,5 @@
+import { AssetDTO } from './assets';
+
 export interface BookResponseDTO {
   id: number;
   authors: AuthorDTO[];
@@ -12,10 +14,6 @@ export interface BookResponseDTO {
   pages: number;
   description: string;
   copies: BookCopyDTO[];
-}
-
-export interface AssetDTO {
-  id: number;
 }
 
 export interface UserDTO {

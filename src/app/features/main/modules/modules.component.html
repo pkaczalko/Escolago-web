@@ -1,8 +1,10 @@
-<h2>Moduł</h2>
+<div class="module">
+  <h2>Moduł</h2>
+</div>
 <p-table [value]="modules" selectionMode="single">
   <ng-template pTemplate="body" let-module>
-    <tr>
-      <td routerLink="{{module.link}}">{{ module.name }}</td>
+    <tr [pSelectableRow]="module">
+      <td routerLink="{{ module.link }}">{{ module.name }}</td>
     </tr>
   </ng-template>
 </p-table>

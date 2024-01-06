@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModulesService } from '../../../core/services/modules/modules.service';
 import { TableModule } from 'primeng/table';
 import { RouterLink } from '@angular/router';
-import { Module } from '../../../core/interfaces/modules';
+import { ModulesDTO } from '../../../core/interfaces/modules';
 
 @Component({
   selector: 'app-modules',
@@ -12,11 +12,11 @@ import { Module } from '../../../core/interfaces/modules';
   styleUrl: './modules.component.css',
 })
 export class ModulesComponent implements OnInit {
-  modules!: Module[];
+  modules!: ModulesDTO[];
   constructor(private modulesService: ModulesService) {}
 
   ngOnInit() {
-    this.modulesService.getModules().subscribe((data: Module[]) => {
+    this.modulesService.getModules().subscribe((data: ModulesDTO[]) => {
       this.modules = data;
     });
   }

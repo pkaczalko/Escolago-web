@@ -32,6 +32,7 @@ import { firstValueFrom } from 'rxjs';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { routes } from '../../../app.routes';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { InputMaskModule } from 'primeng/inputmask';
 
 @Component({
   selector: 'app-single-book',
@@ -54,6 +55,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     ChipsModule,
     KeyFilterModule,
     ConfirmDialogModule,
+    InputMaskModule,
   ],
   providers: [DialogService, DatePipe, ConfirmationService, MessageService],
   templateUrl: './single-book.component.html',

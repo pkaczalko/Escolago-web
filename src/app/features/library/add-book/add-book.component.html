@@ -57,23 +57,35 @@
     <div class="col2">
       <p>
         ISBN: <br />
-        <p-inputGroup>
-          <input
+        <span>
+          <p-inputMask
+            [style]="{
+              width: '15dvw',
+              'border-bottom-right-radius': 0,
+              'border-top-right-radius': 0
+            }"
             aria-labelledby="isbn"
-            id="isbn"
-            pInputText
             class="p-inputtext-sm"
-            type="text"
+            slotChar=""
+            [autoClear]="false"
+            mask="9999999999999"
             [(ngModel)]="newBook.isbn"
-          />
+          ></p-inputMask>
           <p-button
+            [style]="{
+              width: '40px',
+              height: '40px',
+              'border-bottom-left-radius': 0,
+              'border-top-left-radius': 0
+            }"
             type="button"
             icon="pi pi-search"
             [loading]="loading"
             (click)="getApiInfo(newBook.isbn)"
             severity="warning"
           ></p-button>
-        </p-inputGroup>
+        </span>
+
         <span
           style="color: red"
           *ngIf="newBook.isbn.length < 1 && (showWarnings || isbnWarning)"
@@ -84,6 +96,7 @@
       <p>
         <label for="title">Tytuł</label>
         <input
+          [style]="{ width: '15dvw' }"
           id="title"
           pInputText
           class="p-inputtext-sm"
@@ -100,6 +113,7 @@
       <p>
         <label for="authors">Autor / Autorzy</label>
         <p-chips
+          [style]="{ width: '15dvw' }"
           id="authors"
           [(ngModel)]="newBook.authors"
           separator=","
@@ -114,6 +128,7 @@
       <p>
         <label for="genres">Gatunek / Gatunki</label>
         <p-chips
+          [style]="{ width: '15dvw' }"
           id="genres"
           [(ngModel)]="newBook.genres"
           separator=","
@@ -122,6 +137,7 @@
       <p>
         <label for="publisher">Wydawca</label>
         <input
+          [style]="{ width: '15dvw' }"
           id="publisher"
           pInputText
           class="p-inputtext-sm"
@@ -132,6 +148,7 @@
       <p>
         <label for="publishYear">Rok wydania</label>
         <p-inputNumber
+          [style]="{ width: '15dvw' }"
           id="publishYear"
           mode="decimal"
           [useGrouping]="false"
@@ -143,6 +160,7 @@
       <p>
         <label for="description">Opis</label>
         <textarea
+          [style]="{ width: '15dvw' }"
           id="description"
           pInputTextarea
           rows="5"

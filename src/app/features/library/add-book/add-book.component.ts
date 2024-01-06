@@ -4,7 +4,12 @@ import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { NgIf, NgOptimizedImage, UpperCasePipe } from '@angular/common';
+import {
+  NgIf,
+  NgOptimizedImage,
+  NgStyle,
+  UpperCasePipe,
+} from '@angular/common';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { SharedModule } from 'primeng/api';
 import { TableModule, TableRowSelectEvent } from 'primeng/table';
@@ -22,6 +27,7 @@ import { InputGroupModule } from 'primeng/inputgroup';
 import { ExtApiService } from '../../../core/services/extApi/ext-api.service';
 import { Shared } from '../../../shared/shared';
 import { ChipsModule } from 'primeng/chips';
+import { InputMaskModule } from 'primeng/inputmask';
 
 interface UploadEvent {
   originalEvent: Event;
@@ -49,6 +55,8 @@ interface UploadEvent {
     InputGroupModule,
     NgOptimizedImage,
     ChipsModule,
+    InputMaskModule,
+    NgStyle,
   ],
   providers: [DialogService],
   templateUrl: './add-book.component.html',
@@ -150,4 +158,6 @@ export class AddBookComponent {
       } as BookResponseDTO);
     }
   }
+
+  enter() {}
 }
