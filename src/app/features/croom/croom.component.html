@@ -1,4 +1,3 @@
-<p-confirmDialog></p-confirmDialog>
 <div class="table">
   <div class="header">
     <div class="col">
@@ -7,7 +6,7 @@
           <span class="p-input-icon-left inputSearch">
             <i class="pi pi-search"></i>
             <input
-              (keyup.enter)="searchCatalogue()"
+              (keyup.enter)="searchItems()"
               [(ngModel)]="searchValue"
               class="inputSearch"
               [ngStyle]="{
@@ -23,38 +22,15 @@
             pButton
             icon="pi pi-search"
             class="p-button-info"
-            (click)="searchCatalogue()"
+            (click)="searchItems()"
           ></button>
         </p-inputGroup>
-        <div
-          [ngStyle]="{
-            display: 'flex',
-            margin: '10px',
-            width: '100%',
-            'justify-content': 'center'
-          }"
-        >
-          <div *ngFor="let action of actions" class="field-checkbox">
-            <p-radioButton
-              [inputId]="action.key"
-              name="category"
-              [value]="action"
-              [(ngModel)]="selectedAction"
-            ></p-radioButton>
-            <label
-              [for]="action.key"
-              [ngStyle]="{ margin: '0 0.5rem 0 0.25rem' }"
-              class="ml-2"
-              >{{ action.name }}</label
-            >
-          </div>
-        </div>
       </div>
       <div class="add">
         <p-button
           severity="success"
           size="small"
-          (onClick)="addBook()"
+          (onClick)="addItem()"
           label="Dodaj"
           icon="pi pi-plus"
         ></p-button>
@@ -64,9 +40,9 @@
   <p-table
     [(first)]="first"
     selectionMode="single"
-    [(selection)]="selectedBook"
+    [(selection)]="selectedItem"
     (onRowSelect)="onRowSelect($event)"
-    [value]="catalogue"
+    [value]="items"
     [lazy]="true"
     (onLazyLoad)="tableLoad($event)"
     dataKey="id"
@@ -78,20 +54,20 @@
   >
     <ng-template pTemplate="header">
       <tr>
-        <th>Tytuł</th>
-        <th>Isbn</th>
-        <th>Autor</th>
-        <th>Gatunek</th>
+        <th>Numer zasobu</th>
+        <th>Nazwa</th>
+        <th>Słowa kluczowe</th>
+        <th>Kategoria</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-book>
-      <tr [pSelectableRow]="book" [style]="{ 'max-height': '5dvh' }">
-        <td>{{ book.book_title }}</td>
-        <td>{{ book.isbn }}</td>
+    <ng-template pTemplate="body" let-item>
+      <tr [pSelectableRow]="item" [style]="{ 'max-height': '5dvh' }">
+        <td>{{ item.assetId.id }}</td>
+        <td>{{ item.name }}</td>
         <td>
-          {{ book.authors }}
+          {{ item.keywords }}
         </td>
-        <td>{{ book.genres }}</td>
+        <td>{{ item.categories }}</td>
       </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">

@@ -1,0 +1,32 @@
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  .row{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .saveButton{
+    justify-content: flex-end
+  }
+
+  .col1 {
+
+    .okładka {
+      width: 8dvw;
+      background-color:transparent;
+    }
+  }
+  .col2 {
+    margin-left:2dvw;
+    width: 18dvw;
+
+    & p {
+      display:flex;
+      flex-direction: column;
+    }
+  }
+}
+

@@ -1,68 +1,43 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DividerModule } from 'primeng/divider';
+import { ChipsModule } from 'primeng/chips';
+import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
 import { FormsModule } from '@angular/forms';
+import { InputMaskModule } from 'primeng/inputmask';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
-import {
-  NgIf,
-  NgOptimizedImage,
-  NgStyle,
-  UpperCasePipe,
-} from '@angular/common';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { NgIf, NgOptimizedImage } from '@angular/common';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { SharedModule } from 'primeng/api';
 import { TableModule, TableRowSelectEvent } from 'primeng/table';
-import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
-import {
-  BookInfo,
-  BookInfoEdit,
-  BookResponseDTO,
-} from '../../../core/interfaces/book';
-import { InputNumberModule } from 'primeng/inputnumber';
-import { SelectButtonModule } from 'primeng/selectbutton';
-import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { InputGroupModule } from 'primeng/inputgroup';
+import { BookInfoEdit, BookResponseDTO } from '../../../core/interfaces/book';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ExtApiService } from '../../../core/services/extApi/ext-api.service';
 import { Shared } from '../../../shared/shared';
-import { ChipsModule } from 'primeng/chips';
-import { InputMaskModule } from 'primeng/inputmask';
-
-interface UploadEvent {
-  originalEvent: Event;
-  files: File[];
-}
 
 @Component({
-  selector: 'app-add-book',
+  selector: 'app-add-item',
   standalone: true,
   imports: [
     ButtonModule,
-    CardModule,
-    DividerModule,
+    ChipsModule,
+    FileUploadModule,
     FormsModule,
+    InputMaskModule,
+    InputNumberModule,
     InputTextModule,
+    InputTextareaModule,
     NgIf,
-    OverlayPanelModule,
+    NgOptimizedImage,
+    SelectButtonModule,
     SharedModule,
     TableModule,
-    UpperCasePipe,
-    InputNumberModule,
-    SelectButtonModule,
-    FileUploadModule,
-    InputTextareaModule,
-    InputGroupModule,
-    NgOptimizedImage,
-    ChipsModule,
-    InputMaskModule,
-    NgStyle,
   ],
-  providers: [DialogService],
-  templateUrl: './add-book.component.html',
-  styleUrl: './add-book.component.css',
+  templateUrl: './add-item.component.html',
+  styleUrl: './add-item.component.css',
 })
-export class AddBookComponent {
+export class AddItemComponent {
   apiReady = false;
   emptyBook: BookInfoEdit = {
     authors: [],

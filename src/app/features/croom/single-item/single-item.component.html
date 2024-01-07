@@ -1,0 +1,105 @@
+<p-confirmDialog></p-confirmDialog>
+<div class="infoBody">
+  <div class="button">
+    <div class="usuń">
+      <p-button
+        size="small"
+        label="Usuń"
+        severity="danger"
+        icon="pi pi-trash"
+        (onClick)="delete()"
+      >
+      </p-button>
+    </div>
+    <div class="edytuj">
+      <p-button
+        *ngIf="!editMode"
+        (onClick)="editItem()"
+        label="Edytuj"
+        icon="pi pi-file-edit"
+        size="small"
+      ></p-button>
+      <p-button
+        *ngIf="editMode"
+        [loading]="loading"
+        (onClick)="save()"
+        label="Zapisz"
+        icon="pi pi-check"
+        size="small"
+        severity="success"
+      ></p-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p-card>
+        <div class="info">
+          <h3 *ngIf="!editMode">{{ item.name }}</h3>
+          <p *ngIf="editMode">
+            Nazwa:
+            <input type="text" pInputText [(ngModel)]="edit.name" />
+            <span style="color: red" *ngIf="edit.name.length < 1">
+              Pole nie może być puste!</span
+            >
+          </p>
+
+          <label for="id">Numer zasobu:</label>
+          <p id="id">
+            <b>{{ item?.assetId?.id }}</b>
+          </p>
+
+          <div class="okładka" *ngIf="item.link">
+            <img class="okładka" src="{{ item?.link ?? '' }}" alt="okładka" />
+          </div>
+          <p-divider></p-divider>
+          <div class="details">
+            <div class="item">
+              <label for="data">Data dodania:</label>
+              <p>
+                <b id="data">{{ item.dateAdded }}</b>
+              </p>
+            </div>
+
+            <div class="item">
+              <label for="kluczowe">Słowa kluczowe:</label>
+              <p *ngIf="!editMode" id="kluczowe">
+                <b>{{ item.keywords }}</b>
+              </p>
+              <p *ngIf="editMode">
+                <p-chips [(ngModel)]="edit.keywords" separator=","> </p-chips>
+              </p>
+            </div>
+
+            <div class="item">
+              <label for="kategorie">Kategorie:</label>
+              <p *ngIf="!editMode" id="kategorie">
+                <b *ngFor="let category of item.categories; index as i"
+                  >{{ category.name }}
+                </b>
+              </p>
+
+              <p *ngIf="editMode" id="kategorie">
+                <p-chips separator=","></p-chips>
+              </p>
+            </div>
+
+            <div class="item">
+              <label for="opis">Opis:</label>
+              <p *ngIf="!editMode" id="opis">
+                <i>{{ item.description }}</i>
+              </p>
+              <p *ngIf="editMode">
+                <textarea
+                  pInputTextarea
+                  [(ngModel)]="edit.description"
+                  rows="5"
+                  cols="30"
+                ></textarea>
+              </p>
+            </div>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>

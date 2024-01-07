@@ -1,0 +1,215 @@
+<div class="dialogBody">
+  <div class="row saveButton">
+    <p>
+      <p-button
+        label="Zapisz"
+        size="small"
+        severity="success"
+        (onClick)="saveBook()"
+      >
+      </p-button>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col1">
+      <div class="okładka">
+        <img
+          *ngIf="apiReady"
+          class="okładka"
+          [ngSrc]="newBook.cover ?? ''"
+          width="150"
+          height="200"
+        />
+      </div>
+      <p-table
+        *ngIf="apiReady"
+        (onRowSelect)="rowSelected($event)"
+        selectionMode="single"
+        [value]="apiResponses"
+        [tableStyle]="{ 'max-width': '8dvw', 'font-size': '12px' }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Znalezione książki</th>
+          </tr>
+          <td *ngIf="apiResponses.length == 0">
+            <h3>Nie znaleziono,sprawdź isbn lub wprowadź dane ręcznie</h3>
+          </td>
+        </ng-template>
+        <ng-template pTemplate="body" let-api>
+          <tr [pSelectableRow]="api">
+            <td>{{ api.book_title }}</td>
+          </tr>
+        </ng-template>
+        <ng-template
+          pTemplate="footer"
+          *ngIf="proposeBook.book_title.length !== 0"
+        >
+          <tr>
+            <th>Proponowane wartości</th>
+          </tr>
+          <tr [pSelectableRow]="proposeBook">
+            <td>{{ proposeBook.book_title }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="col2">
+      <p>
+        ISBN: <br />
+        <span>
+          <p-inputMask
+            [style]="{
+              width: '15dvw',
+              'border-bottom-right-radius': 0,
+              'border-top-right-radius': 0
+            }"
+            aria-labelledby="isbn"
+            class="p-inputtext-sm"
+            slotChar=""
+            [autoClear]="false"
+            mask="9999999999999"
+            [(ngModel)]="newBook.isbn"
+          ></p-inputMask>
+          <p-button
+            [style]="{
+              width: '40px',
+              height: '40px',
+              'border-bottom-left-radius': 0,
+              'border-top-left-radius': 0
+            }"
+            type="button"
+            icon="pi pi-search"
+            [loading]="loading"
+            (click)="getApiInfo(newBook.isbn)"
+            severity="warning"
+          ></p-button>
+        </span>
+
+        <span
+          style="color: red"
+          *ngIf="newBook.isbn.length < 1 && (showWarnings || isbnWarning)"
+        >
+          Pole nie może być puste!</span
+        >
+      </p>
+      <p>
+        <label for="title">Tytuł</label>
+        <input
+          [style]="{ width: '15dvw' }"
+          id="title"
+          pInputText
+          class="p-inputtext-sm"
+          type="text"
+          [(ngModel)]="newBook.book_title"
+        />
+        <span
+          style="color: red"
+          *ngIf="newBook.book_title.length < 1 && showWarnings"
+        >
+          Pole nie może być puste!</span
+        >
+      </p>
+      <p>
+        <label for="authors">Autor / Autorzy</label>
+        <p-chips
+          [style]="{ width: '15dvw' }"
+          id="authors"
+          [(ngModel)]="newBook.authors"
+          separator=","
+        ></p-chips>
+        <span
+          style="color: red"
+          *ngIf="newBook.authors.length < 1 && showWarnings"
+        >
+          Pole nie może być puste!</span
+        >
+      </p>
+      <p>
+        <label for="genres">Gatunek / Gatunki</label>
+        <p-chips
+          [style]="{ width: '15dvw' }"
+          id="genres"
+          [(ngModel)]="newBook.genres"
+          separator=","
+        ></p-chips>
+      </p>
+      <p>
+        <label for="publisher">Wydawca</label>
+        <input
+          [style]="{ width: '15dvw' }"
+          id="publisher"
+          pInputText
+          class="p-inputtext-sm"
+          type="text"
+          [(ngModel)]="newBook.publisher"
+        />
+      </p>
+      <p>
+        <label for="publishYear">Rok wydania</label>
+        <p-inputNumber
+          [style]="{ width: '15dvw' }"
+          id="publishYear"
+          mode="decimal"
+          [useGrouping]="false"
+          [min]="0"
+          [(ngModel)]="newBook.published_year"
+        >
+        </p-inputNumber>
+      </p>
+      <p>
+        <label for="description">Opis</label>
+        <textarea
+          [style]="{ width: '15dvw' }"
+          id="description"
+          pInputTextarea
+          rows="5"
+          cols="30"
+          [autoResize]="true"
+          class="p-inputtext-sm"
+          [(ngModel)]="newBook.description"
+        ></textarea>
+      </p>
+      <div class="virtual">
+        <p>
+          <label for="virtual">Czy wirtualny?</label>
+          <p-selectButton
+            [allowEmpty]="false"
+            id="virtual"
+            [options]="[
+              { label: 'Nie', value: false },
+              { label: 'Tak', value: true }
+            ]"
+            [(ngModel)]="newBook.virtual"
+          ></p-selectButton>
+        </p>
+        <p *ngIf="newBook.virtual">
+          <p-fileUpload
+            name="demo[]"
+            url="https://www.primefaces.org/cdn/api/upload.php"
+            (onUpload)="onUpload($event)"
+            [multiple]="true"
+            accept=".pdf,.epub,.mobi,.azw,.azw3,.azw4,.prc,.doc,.docx,.txt,.rtf"
+            [maxFileSize]="10000000"
+            chooseLabel="Dodaj pliki"
+            uploadLabel="Zatwierdź"
+            cancelLabel="Anuluj"
+            cancelStyleClass="uploadButton"
+            removeStyleClass="uploadButton"
+            uploadStyleClass="uploadButton"
+            chooseStyleClass="uploadButton"
+            styleClass="uploadStyleClass"
+          >
+            <ng-template pTemplate="content">
+              <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">
+                  {{ file.name }} - {{ file.size }} bytes
+                </li>
+              </ul>
+            </ng-template>
+          </p-fileUpload>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

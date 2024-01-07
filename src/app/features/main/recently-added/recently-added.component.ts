@@ -42,7 +42,7 @@ export class RecentlyAddedComponent implements OnInit {
         link = 'book/' + element.book.bookId;
         module = 'Biblioteka';
       } else {
-        link = 'item/' + element?.item?.id;
+        link = 'item/' + element.item?.id;
         module = 'Świetlica';
       }
       preparedData.push({
@@ -58,7 +58,7 @@ export class RecentlyAddedComponent implements OnInit {
   }
 
   onRowSelect($event: TableRowSelectEvent) {
-    console.log($event);
+    console.log($event.data);
     this.router.navigate([$event.data.link]);
   }
 }

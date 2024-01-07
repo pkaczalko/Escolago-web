@@ -13,6 +13,14 @@ export interface ShortItemDTO {
   assetId: AssetDTO;
 }
 
+export interface ItemTable {
+  id: number;
+  name: string;
+  keywords: string;
+  categories: string;
+  assetId: AssetDTO;
+}
+
 export interface ItemCategoryDTO {
   id: number;
   name: string;
@@ -23,6 +31,17 @@ export interface ItemDTO {
   name: string;
   keywords: string;
   categories: ItemCategoryDTO[];
+  assetId: AssetDTO;
+  link: string;
+  description: string;
+  dateAdded: string;
+}
+
+export interface ItemEdit {
+  id: number;
+  name: string;
+  keywords: string;
+  categories: { id: number; name: string }[];
   assetId: AssetDTO;
   link: string;
   description: string;

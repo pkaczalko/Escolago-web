@@ -1,0 +1,65 @@
+.infoBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .edytuj {
+      margin-right: 1.25rem;
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5dvw;
+      width: 30dvw;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+
+        .okładka {
+          max-width: 200px;
+          max-height: 200px;
+        }
+        .nazwa {
+          height: 200px;
+          width: 50%;
+        }
+
+        .details{
+          display:flex;
+          flex-direction:column;
+          justify-content: center;
+        }
+        .edytuj {
+          height: 1px;
+          margin-right: 1rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+div.editBlock > p {
+  margin: 0;
+  padding: 0;
+}
+
