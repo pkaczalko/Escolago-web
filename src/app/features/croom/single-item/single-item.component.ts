@@ -17,7 +17,8 @@ import { ItemDTO, ItemEdit } from '../../../core/interfaces/items';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ItemService } from '../../../core/services/item/item.service';
-
+import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
+import { ToastModule } from 'primeng/toast';
 @Component({
   selector: 'app-single-item',
   standalone: true,
@@ -38,10 +39,12 @@ import { ItemService } from '../../../core/services/item/item.service';
     DropdownModule,
     InputTextareaModule,
     NgForOf,
+    FileUploadModule,
+    ToastModule,
   ],
   templateUrl: './single-item.component.html',
   styleUrl: './single-item.component.css',
-  providers: [DialogService, DatePipe, ConfirmationService, MessageService],
+  providers: [DialogService, DatePipe, ConfirmationService],
 })
 export class SingleItemComponent implements OnInit {
   id: number = 0;
@@ -49,31 +52,103 @@ export class SingleItemComponent implements OnInit {
   item: ItemDTO = {} as ItemDTO;
   edit: ItemEdit = {} as ItemEdit;
   loading: boolean = false;
+  saveRequest: ItemDTO = {} as ItemDTO;
+  uploadUrl!: string;
+  icon: string = 'pi pi-plus';
+  buttonLabel: string = '';
 
   constructor(
     private itemService: ItemService,
     private activatedRoute: ActivatedRoute,
+    private messageService: MessageService,
+    private router: Router,
   ) {}
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.itemService.getItemById(this.id).subscribe((data) => {
-      console.log(data);
+      this.uploadUrl =
+        'http://localhost:8080/asset/' + data.assetId.id + '/upload';
       this.item = data;
-      this.edit = {
-        ...data,
-        categories: data.categories.map((category) => category),
-      };
+      this.setEdit();
     });
+  }
+
+  setEdit(data: ItemDTO = this.item) {
+    this.edit = {
+      ...data,
+      categories: data.categories.map((category) => category.name),
+      keywords: data.keywords.split(','),
+    };
   }
 
   editItem() {
     this.editMode = true;
+    if (this.edit.link) {
+      this.buttonLabel = 'Zmień zdjęcie';
+    } else {
+      this.buttonLabel = 'Dodaj zdjęcie';
+    }
   }
 
   save() {
     this.editMode = false;
+    this.saveRequest = {
+      ...this.edit,
+      keywords: this.edit.keywords.join(','),
+      categories: this.edit.categories.map((category) => {
+        return { name: category } as any;
+      }),
+    };
+    this.itemService
+      .updateItem(this.id.toString(), this.saveRequest)
+      .subscribe({
+        next: (data) => {
+          this.item = data;
+          this.setEdit();
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sukces',
+            detail: 'Pomyślnie zaktualizowano zasób',
+          });
+        },
+        error: (err) => {},
+      });
   }
 
-  delete() {}
+  delete() {
+    this.itemService.deleteItem(this.id.toString()).subscribe(() => {
+      this.router.navigate(['/croom']).then(() => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Sukces',
+          detail: 'Pomyślnie usunięto zasób',
+        });
+      });
+    });
+  }
+
+  onBasicUploadAuto(event: any) {
+    if (event.originalEvent.body.url) {
+      setTimeout(() => {
+        this.edit.link = event.originalEvent.body.url;
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Sukces',
+          detail: 'Pomyślnie dodano plik',
+        });
+      }, 100);
+    } else {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Błąd',
+        detail: 'Coś poszło nie tak',
+      });
+    }
+    this.icon = 'pi pi-plus';
+  }
+
+  selected() {
+    this.icon = 'pi pi-spin pi-spinner';
+  }
 }

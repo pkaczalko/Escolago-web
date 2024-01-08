@@ -23,7 +23,6 @@ import { ButtonModule } from 'primeng/button';
     InputNumberModule,
     ButtonModule,
   ],
-  providers: [MessageService, DialogService],
   templateUrl: './add-copy.component.html',
   styleUrl: './add-copy.component.css',
 })

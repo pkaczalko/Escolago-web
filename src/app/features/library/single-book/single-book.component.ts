@@ -57,7 +57,7 @@ import { InputMaskModule } from 'primeng/inputmask';
     ConfirmDialogModule,
     InputMaskModule,
   ],
-  providers: [DialogService, DatePipe, ConfirmationService, MessageService],
+  providers: [DialogService, DatePipe, ConfirmationService],
   templateUrl: './single-book.component.html',
   styleUrl: './single-book.component.css',
 })
@@ -102,6 +102,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
       },
       error: (error) => {
         this.bookFront = {} as BookInfo;
+        console.log(error);
       },
     });
   }
@@ -316,11 +317,13 @@ export class SingleBookComponent implements OnInit, OnDestroy {
           },
           complete: () => {
             this.router.navigate(['/library']).then((r) => {
-              this.messageService.add({
-                severity: 'success',
-                summary: 'Sukces',
-                detail: 'Usunięto książkę',
-              });
+              setTimeout(() => {
+                this.messageService.add({
+                  severity: 'success',
+                  summary: 'Sukces',
+                  detail: 'Usunięto książkę',
+                });
+              }, 0);
             });
           },
         });

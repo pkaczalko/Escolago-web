@@ -1,0 +1,14 @@
+<p-fileUpload
+  mode="basic"
+  name="file"
+  [url]="uploadUrl"
+  accept="image/*"
+  [maxFileSize]="1000000"
+  (onUpload)="onBasicUploadAuto($event)"
+  [auto]="true"
+  (click)="selected()"
+  [chooseIcon]="icon"
+  [chooseLabel]="!fileAdded ? 'Wybierz zdjęcie' : 'Zdjęcie dodane'"
+></p-fileUpload>
+<p-button label="Zapisz" size="small" severity="success" (onClick)="save()">
+</p-button>

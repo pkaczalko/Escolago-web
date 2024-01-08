@@ -40,8 +40,8 @@ export interface ItemDTO {
 export interface ItemEdit {
   id: number;
   name: string;
-  keywords: string;
-  categories: { id: number; name: string }[];
+  keywords: string[];
+  categories: string[];
   assetId: AssetDTO;
   link: string;
   description: string;

@@ -11,11 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { InputTextModule } from 'primeng/inputtext';
 import { ItemDTO, ItemTable, ShortItemDTO } from '../../core/interfaces/items';
 import { ItemService } from '../../core/services/item/item.service';
 import { AddItemComponent } from './add-item/add-item.component';
+import { AddCoverComponent } from './add-cover/add-cover.component';
 
 @Component({
   selector: 'app-croom',
@@ -33,7 +34,7 @@ import { AddItemComponent } from './add-item/add-item.component';
   ],
   templateUrl: './croom.component.html',
   styleUrl: './croom.component.css',
-  providers: [DialogService, DatePipe],
+  providers: [DialogService, DatePipe, ConfirmationService],
 })
 export class CroomComponent implements OnInit {
   items: ItemTable[] = [];
@@ -52,10 +53,12 @@ export class CroomComponent implements OnInit {
     private dialogService: DialogService,
     private messageService: MessageService,
     private datePipe: DatePipe,
+    private confirmationService: ConfirmationService,
   ) {}
 
   ngOnInit() {
     this.loading = true;
+    this.addItem();
   }
 
   tableLoad(event: TableLazyLoadEvent) {
@@ -97,17 +100,39 @@ export class CroomComponent implements OnInit {
       width: '35dvw',
       contentStyle: { 'max-height': 'auto', overflow: 'auto' },
     });
-    this.ref.onClose.subscribe((res) => {
+    this.ref.onClose.subscribe((res: ItemDTO) => {
       if (res) {
-        this.itemService.addItem(res).subscribe({
-          next: (data) => {
-            this.newItem = data;
+        this.newItem = res;
+        this.confirmationService.confirm({
+          message: 'Czy chcesz dodać zdjęcie do zasobu?',
+          icon: 'pi pi-question-circle',
+          acceptLabel: 'Tak',
+          rejectLabel: 'Nie',
+          rejectButtonStyleClass: 'p-button-danger',
+          accept: () => {
+            this.ref = this.dialogService.open(AddCoverComponent, {
+              header: 'Dodaj zdjęcie',
+              width: '35dvw',
+              data: res.assetId.id,
+            });
+            this.ref.onClose.subscribe((res) => {
+              this.newItem.link = res;
+              this.itemService
+                .updateItem(this.newItem.id.toString(), this.newItem)
+                .subscribe((res) => {
+                  console.log(res);
+                });
+            });
           },
-          error: (err) => {
-            err.catch();
+          reject: () => {
+            this.messageService.add({
+              severity: 'success',
+              summary: 'Dodano zasób',
+              detail: 'Pomyślnie dodano zasób',
+            });
           },
-          complete: () => {},
         });
+        this.loadItems(0);
       }
     });
   }

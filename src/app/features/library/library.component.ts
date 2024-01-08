@@ -30,6 +30,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { FormsModule } from '@angular/forms';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-library',
@@ -46,6 +47,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     NgStyle,
     FormsModule,
     RadioButtonModule,
+    ToastModule,
   ],
   templateUrl: './library.component.html',
   styleUrl: './library.component.css',

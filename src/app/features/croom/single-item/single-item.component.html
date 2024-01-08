@@ -48,8 +48,26 @@
             <b>{{ item?.assetId?.id }}</b>
           </p>
 
-          <div class="okładka" *ngIf="item.link">
-            <img class="okładka" src="{{ item?.link ?? '' }}" alt="okładka" />
+          <div class="okładka">
+            <img
+              *ngIf="edit.link"
+              class="okładkaimg"
+              src="{{ edit.link }}"
+              alt="okładka"
+            />
+            <p-fileUpload
+              *ngIf="editMode"
+              mode="basic"
+              name="file"
+              [url]="uploadUrl"
+              accept="image/*"
+              [maxFileSize]="1000000"
+              (onUpload)="onBasicUploadAuto($event)"
+              [auto]="true"
+              (click)="selected()"
+              [chooseIcon]="icon"
+              [chooseLabel]="buttonLabel"
+            ></p-fileUpload>
           </div>
           <p-divider></p-divider>
           <div class="details">
@@ -79,7 +97,7 @@
               </p>
 
               <p *ngIf="editMode" id="kategorie">
-                <p-chips separator=","></p-chips>
+                <p-chips [(ngModel)]="edit.categories" separator=","></p-chips>
               </p>
             </div>
 

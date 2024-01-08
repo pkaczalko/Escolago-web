@@ -34,8 +34,11 @@
         align-items: center;
 
         .okładka {
-          max-width: 200px;
-          max-height: 200px;
+
+          .okładkaimg{
+            max-width: 200px;
+            max-height: 200px;
+          }
         }
         .nazwa {
           height: 200px;

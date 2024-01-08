@@ -30,4 +30,15 @@ export class ItemService {
   getItemById(id: number) {
     return this.http.get<ItemDTO>(`http://localhost:8080/croom/item/` + id);
   }
+
+  updateItem(id: string, item: ItemDTO) {
+    return this.http.put<ItemDTO>(
+      `http://localhost:8080/croom/item/` + id,
+      item,
+    );
+  }
+
+  deleteItem(id: string) {
+    return this.http.delete(`http://localhost:8080/croom/item/` + id);
+  }
 }
