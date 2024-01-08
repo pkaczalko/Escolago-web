@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { NgStyle } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -21,5 +22,9 @@ import { NgStyle } from '@angular/common';
 export class SearchComponent {
   searchValue: string = '';
 
-  search() {}
+  constructor(private router: Router) {}
+
+  search() {
+    this.router.navigate(['/search'], { queryParams: { q: this.searchValue } });
+  }
 }

@@ -58,7 +58,6 @@ export class CroomComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.addItem();
   }
 
   tableLoad(event: TableLazyLoadEvent) {

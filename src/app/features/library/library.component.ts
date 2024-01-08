@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   ConfirmationService,
   LazyLoadEvent,
@@ -31,6 +31,8 @@ import { InputGroupModule } from 'primeng/inputgroup';
 import { FormsModule } from '@angular/forms';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ToastModule } from 'primeng/toast';
+import { AddBookFileComponent } from './add-book/add-book-file/add-book-file.component';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-library',
@@ -53,7 +55,7 @@ import { ToastModule } from 'primeng/toast';
   styleUrl: './library.component.css',
   providers: [DialogService, ConfirmationService, DatePipe],
 })
-export class LibraryComponent implements OnInit {
+export class LibraryComponent implements OnInit, OnDestroy {
   catalogue!: CatalogueTable[];
   selectedBook!: CatalogueTable;
   totalRecords!: number;
@@ -141,7 +143,10 @@ export class LibraryComponent implements OnInit {
             }
           },
           complete: () => {
-            this.copyConfDialog();
+            if (!this.newBook.virtual) this.copyConfDialog();
+            else {
+              this.fileConf();
+            }
           },
         });
       }
@@ -171,9 +176,6 @@ export class LibraryComponent implements OnInit {
                   this.datePipe.transform(Date.now(), 'yyyy-MM-dd')
                 ),
               };
-              if (this.newBook.virtual) {
-                copy.link = data.link;
-              }
 
               let copies: BookCopyRespDTO[] = [];
               for (let i = 0; i < data.quantity; i++) {
@@ -204,8 +206,59 @@ export class LibraryComponent implements OnInit {
     });
   }
 
+  fileConf() {
+    this.confirmationService.confirm({
+      message: 'Czy chcesz dodać plik do książki?',
+      header: 'Plik',
+      acceptLabel: 'Tak',
+      rejectLabel: 'Nie',
+      accept: () => {
+        this.addFile();
+      },
+      reject: () => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Sukces',
+          detail: 'Dodano książkę',
+        });
+      },
+    });
+  }
+
+  addFile() {
+    let newCopy: BookCopyRespDTO = {
+      rented: false,
+      date_added: <string>this.datePipe.transform(Date.now(), 'yyyy-MM-dd'),
+    };
+    this.bookService
+      .addCopy(this.newBook.id.toString(), [newCopy])
+      .subscribe((res: any) => {
+        this.newBook.copies = res?.body ?? [];
+      });
+
+    this.ref = this.dialogService.open(AddBookFileComponent, {
+      header: 'Dodaj plik',
+      width: '35vw',
+      contentStyle: { 'max-height': 'auto', overflow: 'auto' },
+      data: this.newBook.id,
+    });
+
+    this.ref.onClose.subscribe({
+      next: (data) => {
+        this.bookService
+          .setCopyLink(this.newBook.copies[0].id, data)
+          .subscribe({});
+      },
+      error: (err) => {},
+    });
+  }
+
   searchCatalogue() {
     this.first = 0;
     this.loadCatalogue(0);
+  }
+
+  ngOnDestroy() {
+    this.ref?.destroy();
   }
 }

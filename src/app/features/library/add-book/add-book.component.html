@@ -183,32 +183,6 @@
             [(ngModel)]="newBook.virtual"
           ></p-selectButton>
         </p>
-        <p *ngIf="newBook.virtual">
-          <p-fileUpload
-            name="demo[]"
-            url="https://www.primefaces.org/cdn/api/upload.php"
-            (onUpload)="onUpload($event)"
-            [multiple]="true"
-            accept=".pdf,.epub,.mobi,.azw,.azw3,.azw4,.prc,.doc,.docx,.txt,.rtf"
-            [maxFileSize]="10000000"
-            chooseLabel="Dodaj pliki"
-            uploadLabel="Zatwierdź"
-            cancelLabel="Anuluj"
-            cancelStyleClass="uploadButton"
-            removeStyleClass="uploadButton"
-            uploadStyleClass="uploadButton"
-            chooseStyleClass="uploadButton"
-            styleClass="uploadStyleClass"
-          >
-            <ng-template pTemplate="content">
-              <ul *ngIf="uploadedFiles.length">
-                <li *ngFor="let file of uploadedFiles">
-                  {{ file.name }} - {{ file.size }} bytes
-                </li>
-              </ul>
-            </ng-template>
-          </p-fileUpload>
-        </p>
       </div>
     </div>
   </div>

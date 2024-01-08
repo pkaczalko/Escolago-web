@@ -76,4 +76,11 @@ export class BookService {
   deleteBook(id: string) {
     return this.http.delete('http://localhost:8080/book/delete/' + id);
   }
+
+  setCopyLink(id: number, link: string) {
+    return this.http.put(
+      'http://localhost:8080/book/' + id.toString() + '/setlink',
+      link,
+    );
+  }
 }

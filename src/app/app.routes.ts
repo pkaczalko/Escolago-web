@@ -11,7 +11,7 @@ export const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'library', component: LibraryComponent },
   { path: 'croom', component: CroomComponent },
-  { path: 'search', component: SearchComponent },
   { path: 'book/:id', component: SingleBookComponent },
   { path: 'item/:id', component: SingleItemComponent },
+  { path: 'search', component: TableComponent },
 ];

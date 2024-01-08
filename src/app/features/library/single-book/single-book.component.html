@@ -191,7 +191,7 @@
                 <tr>
                   <td>{{ copy.asset_id.id }}</td>
                   <td>
-                    <span *ngIf="copy.rented">
+                    <span *ngIf="copy.rented && !this.bookDTO.virtual">
                       <div class="card flex justify-content-center">
                         <p-overlayPanel #op>
                           <p>
@@ -243,6 +243,7 @@
                     </span>
                     <span *ngIf="!copy.rented">
                       <p-button
+                        *ngIf="!this.bookDTO.virtual"
                         label="Wypożycz"
                         size="small"
                         severity="info"
@@ -269,7 +270,7 @@
             </p-table>
 
             <ng-template pTemplate="header">
-              <div class="dodaj">
+              <div class="dodaj" *ngIf="!this.bookDTO.virtual">
                 <p-button
                   (click)="addCopy()"
                   label="Dodaj"

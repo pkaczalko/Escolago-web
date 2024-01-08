@@ -12,7 +12,7 @@ export class AssetsService {
     return this.http.get<JoinAssetsDTO[]>('http://localhost:8080/assets/last');
   }
 
-  getAssets(page: number = 0, limit: number = 10, search: string = '') {
+  getAssets(page: number = 0, search: string = '', limit: number = 10) {
     search = search.trim().replace(' ', '+');
     return this.http.get<AssetPagedResponse>(
       'http://localhost:8080/assets?page=' +
