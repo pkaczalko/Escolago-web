@@ -6,7 +6,7 @@ import {
 } from '../core/interfaces/book';
 
 export class Shared {
-  static generesToString(genres: GenreDTO[]): string {
+  static genresToString(genres: GenreDTO[]): string {
     if (genres) return this.tableToString(genres.map((genere) => genere.name));
     else return '';
   }

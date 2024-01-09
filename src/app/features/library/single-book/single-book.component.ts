@@ -71,7 +71,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
   edit!: BookInfoEdit;
   ref: DynamicDialogRef | undefined;
   authors: string[] = [];
-  generes: string[] = [];
+  genres: string[] = [];
   isbn!: string | number;
 
   constructor(
@@ -93,11 +93,11 @@ export class SingleBookComponent implements OnInit, OnDestroy {
         this.bookFront = {
           ...data,
           authors: Shared.authorsToString(data.authors),
-          genres: Shared.generesToString(data.genres),
+          genres: Shared.genresToString(data.genres),
           type: this.bookType(data.virtual),
         } as BookInfo;
         this.authors = data.authors.map((a) => a.name);
-        this.generes = data.genres.map((g) => g.name);
+        this.genres = data.genres.map((g) => g.name);
         this.bookCopies = data.copies;
       },
       error: (error) => {
@@ -115,7 +115,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
     this.edit = {
       ...this.bookFront,
       authors: this.authors,
-      genres: this.generes,
+      genres: this.genres,
     };
     this.editMode = true;
   }

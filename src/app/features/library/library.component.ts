@@ -111,7 +111,7 @@ export class LibraryComponent implements OnInit, OnDestroy {
       table.push({
         ...book,
         authors: Shared.authorsToString(book.authors),
-        genres: Shared.generesToString(book.genres),
+        genres: Shared.genresToString(book.genres),
       } as CatalogueTable);
     });
     return table;

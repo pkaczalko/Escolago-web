@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
-import { NgIf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-add-book-file',
   standalone: true,
-  imports: [FileUploadModule, NgIf],
+  imports: [FileUploadModule, NgIf, NgForOf],
   templateUrl: './add-book-file.component.html',
   styleUrl: './add-book-file.component.css',
 })
