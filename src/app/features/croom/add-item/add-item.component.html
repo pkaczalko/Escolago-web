@@ -12,8 +12,9 @@
   </div>
   <div class="row">
     <div class="col2">
-      <p>Nazwa</p>
+      <p>Nazwa</p> <span style="color:red" *ngIf="warn&&newItem.name.length<1" > Pole nie może być puste! </span>
       <input pInputText [(ngModel)]="newItem.name" type="text" />
+
       <p>Słowa kluczowe</p>
       <p-chips [(ngModel)]="newItem.keywords" separator=","></p-chips>
       <p>Kategorie</p>

@@ -15,7 +15,7 @@ import {
   GenreDTO,
 } from '../../../core/interfaces/book';
 import { Shared } from '../../../shared/shared';
-import { CommonModule, DatePipe, NgIf, UpperCasePipe } from '@angular/common';
+import { DatePipe, NgIf, UpperCasePipe } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
@@ -28,9 +28,7 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AddCopyComponent } from './add-copy/add-copy.component';
 import { RentFormComponent } from './rent-form/rent-form.component';
 import { ChipsModule } from 'primeng/chips';
-import { firstValueFrom } from 'rxjs';
 import { KeyFilterModule } from 'primeng/keyfilter';
-import { routes } from '../../../app.routes';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { InputMaskModule } from 'primeng/inputmask';
 
@@ -119,7 +117,6 @@ export class SingleBookComponent implements OnInit, OnDestroy {
     };
     this.editMode = true;
   }
-
   saveChanges() {
     this.loading = true;
     if (
@@ -128,15 +125,12 @@ export class SingleBookComponent implements OnInit, OnDestroy {
         ...this.edit,
         genres: Shared.tableToString(this.edit.genres),
         authors: Shared.tableToString(this.edit.authors),
-      })
-    ) {
-      setTimeout(() => {
+      })) {setTimeout(() => {
         this.loading = false;
         this.editMode = false;
       }, 500);
       return;
     }
-
     let editedAuthors = Shared.DTOtoResponse(
       this.bookDTO.authors,
       Shared.TableToAuthors(this.edit.authors),
@@ -145,20 +139,16 @@ export class SingleBookComponent implements OnInit, OnDestroy {
       this.bookDTO.genres,
       Shared.TableToGenres(this.edit.genres),
     ) as GenreDTO[];
-
     let bookRequest: BookResponseDTO = {
       ...this.edit,
       authors: editedAuthors,
       genres: editedGenres,
     };
-
     this.bookFront = {
       ...this.edit,
       genres: Shared.tableToString(this.edit.genres),
       authors: Shared.tableToString(this.edit.authors),
-    };
-
-    setTimeout(() => {
+    };setTimeout(() => {
       this.bookService.editBook(bookRequest).subscribe({
         next: (res) => {
           this.loading = false;
@@ -168,8 +158,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
             summary: 'Sukces',
             detail: 'Zapisano zmiany',
           });
-        },
-        error: (error) => {
+        }, error: (error) => {
           this.loading = false;
           this.editMode = false;
           this.messageService.add({
@@ -177,9 +166,7 @@ export class SingleBookComponent implements OnInit, OnDestroy {
             summary: 'Błąd ' + error.status,
             detail: 'nie zapisano zmian',
           });
-          setTimeout(() => {
-            //location.reload();
-          }, 1000);
+          setTimeout(() => {}, 1000);
         },
       });
     }, 500);
@@ -191,7 +178,6 @@ export class SingleBookComponent implements OnInit, OnDestroy {
       'Dodaj egzemplarz',
       this.bookFront.virtual,
     );
-
     this.ref.onClose.subscribe((data) => {
       if (data) {
         let copy: BookCopyRespDTO = {
@@ -200,19 +186,14 @@ export class SingleBookComponent implements OnInit, OnDestroy {
         };
         if (this.bookFront.virtual) {
           copy.link = data.link;
-        }
-
-        let copies: BookCopyRespDTO[] = [];
+        } let copies: BookCopyRespDTO[] = [];
         for (let i = 0; i < data.quantity; i++) {
           copies.push(copy);
-        }
-        this.bookService
+        }this.bookService
           .addCopy(this.bookFront.id.toString(), copies)
           .subscribe((res) => {
-            this.bookCopies = [
-              ...this.bookCopies,
-              ...(<BookCopyDTO[]>res.body),
-            ];
+            this.bookCopies = [...this.bookCopies,
+              ...(<BookCopyDTO[]>res.body),];
             this.bookFront.copies = this.bookCopies;
             this.messageService.add({
               severity: 'info',
@@ -227,7 +208,8 @@ export class SingleBookComponent implements OnInit, OnDestroy {
   returnCopy(copy: BookCopyDTO) {
     if (copy.loan?.id) {
       let loan_id = copy.loan.id;
-      this.bookService.returnCopy(loan_id, copy).subscribe((res) => {
+      this.bookService.returnCopy(loan_id, copy)
+        .subscribe((res) => {
         this.updateCopies(res as BookCopyDTO);
         this.messageService.add({
           severity: 'info',
@@ -264,6 +246,12 @@ export class SingleBookComponent implements OnInit, OnDestroy {
     });
   }
 
+
+
+
+
+
+
   ngOnDestroy() {
     if (this.ref) {
       this.ref.close();
@@ -289,8 +277,10 @@ export class SingleBookComponent implements OnInit, OnDestroy {
   }
 
   deleteCopy(copy: BookCopyDTO) {
-    this.bookService.deleteCopy(copy.id.toString()).subscribe((res) => {
-      this.bookCopies = this.bookCopies.filter((c) => c.id != copy.id);
+    this.bookService.deleteCopy(copy.id.toString()).subscribe(
+      (res) => {
+      this.bookCopies = this.bookCopies.filter(
+        (c) => c.id != copy.id);
       this.bookFront.copies = this.bookCopies;
       this.messageService.add({
         severity: 'success',
@@ -310,27 +300,24 @@ export class SingleBookComponent implements OnInit, OnDestroy {
       acceptLabel: 'Tak',
       rejectLabel: 'Nie',
       accept: () => {
-        this.bookService.deleteBook(this.bookDTO.id.toString()).subscribe({
+        this.bookService.deleteBook(this.bookDTO.id.toString())
+          .subscribe({
           next: (res) => {},
           error: (err) => {
             console.log(err);
-          },
-          complete: () => {
-            this.router.navigate(['/library']).then((r) => {
+          }, complete: () => {
+            this.router.navigate(['/library'])
+              .then((r) => {
               setTimeout(() => {
                 this.messageService.add({
                   severity: 'success',
                   summary: 'Sukces',
                   detail: 'Usunięto książkę',
                 });
-              }, 0);
-            });
-          },
-        });
-      },
+              }, 0);});},});},
       reject: () => {
         return;
       },
-    });
-  }
+    });}
+
 }

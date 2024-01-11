@@ -5,7 +5,6 @@ import {
   BookCopyRespDTO,
   BookResponseDTO,
 } from '../../interfaces/book';
-import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

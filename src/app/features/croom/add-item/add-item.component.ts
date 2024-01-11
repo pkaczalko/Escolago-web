@@ -34,7 +34,7 @@ export class AddItemComponent {
     private datePipe: DatePipe,
     private itemService: ItemService,
   ) {}
-
+  warn = false;
   newItem: ItemEdit = {
     name: '',
     keywords: [],
@@ -46,6 +46,7 @@ export class AddItemComponent {
 
   saveItem() {
     if (this.newItem.name === '') {
+      this.warn = true;
       return;
     }
     this.itemService

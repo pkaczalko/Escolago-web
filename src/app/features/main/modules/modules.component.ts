@@ -16,8 +16,49 @@ export class ModulesComponent implements OnInit {
   constructor(private modulesService: ModulesService) {}
 
   ngOnInit() {
-    this.modulesService.getModules().subscribe((data: ModulesDTO[]) => {
+    this.modulesService.getModules()
+      .subscribe(
+        (data: ModulesDTO[]) => {
       this.modules = data;
     });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DynamicDialogConfig, DynamicDialogRef} from "primeng/dynamicdialog";
+import {DynamicDialogRef} from "primeng/dynamicdialog";
 import {ButtonModule} from "primeng/button";
 import {FormsModule} from "@angular/forms";
 import {InputNumberModule} from "primeng/inputnumber";

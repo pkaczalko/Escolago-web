@@ -1,5 +1,5 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
+import { Component, OnInit } from '@angular/core';
+import { FileUploadModule } from 'primeng/fileupload';
 import { NgIf } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -57,3 +57,10 @@ export class AddCoverComponent implements OnInit {
     this.ref.close(this.link);
   }
 }
+
+
+
+
+
+
+

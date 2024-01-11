@@ -1,7 +1,5 @@
 import {
   AuthorDTO,
-  BookCopyDTO,
-  BookCopyRespDTO,
   GenreDTO,
 } from '../core/interfaces/book';
 
@@ -26,19 +24,6 @@ export class Shared {
     return tableString;
   }
 
-  private static StringToTable(string: string): string[] {
-    return string.split(',');
-  }
-
-  static StringToAuthors(string: string): AuthorDTO[] {
-    let table = this.StringToTable(string);
-    let authors: AuthorDTO[] = [];
-    for (let author of table) {
-      authors.push({ name: author } as AuthorDTO);
-    }
-    return authors;
-  }
-
   static TableToAuthors(table: string[]): AuthorDTO[] {
     let authors: AuthorDTO[] = [];
     for (let author of table) {
@@ -48,15 +33,6 @@ export class Shared {
   }
 
   static TableToGenres(table: string[]): GenreDTO[] {
-    let genres: GenreDTO[] = [];
-    for (let genre of table) {
-      genres.push({ name: genre } as GenreDTO);
-    }
-    return genres;
-  }
-
-  static StringtoGenres(string: string): GenreDTO[] {
-    let table = this.StringToTable(string);
     let genres: GenreDTO[] = [];
     for (let genre of table) {
       genres.push({ name: genre } as GenreDTO);

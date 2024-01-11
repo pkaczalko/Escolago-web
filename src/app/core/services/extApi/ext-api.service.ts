@@ -5,13 +5,10 @@ import {
   GoogleResponse,
   OpenLibraryAPI,
   OpenLibraryResponse,
-  openSubject,
 } from '../../interfaces/ExtApis';
 import { firstValueFrom, forkJoin } from 'rxjs';
 import { BookResponseDTO } from '../../interfaces/book';
 import { Shared } from '../../../shared/shared';
-import { join } from '@angular/compiler-cli';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -42,19 +39,15 @@ export class ExtApiService {
     let google: GoogleAPI = {} as any;
     let openLib: OpenLibraryAPI = {} as OpenLibraryAPI;
     let bookInfo: BookResponseDTO[] = [];
-
     try {
       const res = await firstValueFrom(
         forkJoin([this.getGoogleApi(isbn), this.getOpenLibraryApi(isbn)]),
       );
-
       if (res[0].totalItems !== 0) {
         let gbook = res[0].items[0];
         google.title =
           gbook.volumeInfo?.title +
-            (gbook.volumeInfo.subtitle
-              ? ' ' + gbook.volumeInfo.subtitle
-              : '') ?? '';
+            (gbook.volumeInfo.subtitle ? ' ' + gbook.volumeInfo.subtitle : '') ?? '';
         google.authors = gbook.volumeInfo?.authors ?? [];
         google.publisher = gbook.volumeInfo.publisher ?? '';
         google.publishedDate = gbook.volumeInfo?.publishedDate ?? '';
@@ -67,9 +60,7 @@ export class ExtApiService {
         google.categories = gbook.volumeInfo?.categories ?? [];
       } else {
         empty[0] = true;
-      }
-
-      if (JSON.stringify(res[1]) !== '{}') {
+      }if (JSON.stringify(res[1]) !== '{}') {
         let response = res[1]['ISBN:' + isbn] as OpenLibraryResponse;
         let cover =
           response.cover.large ??
@@ -134,14 +125,9 @@ export class ExtApiService {
   }
 
   compareBooks(google: BookResponseDTO, openLibBook: BookResponseDTO) {
-    if (
-      JSON.stringify(google) === JSON.stringify(openLibBook) &&
-      JSON.stringify(google) === JSON.stringify({})
-    ) {
-      return [];
-    }
+    if (JSON.stringify(google) === JSON.stringify(openLibBook) && JSON.stringify(google) === JSON.stringify({})
+    ){return [];}
     let bestBook: BookResponseDTO = {} as BookResponseDTO;
-
     bestBook.book_title =
       openLibBook.book_title?.length > google.book_title?.length
         ? openLibBook.book_title
@@ -178,8 +164,6 @@ export class ExtApiService {
         : google.description;
     bestBook.virtual = google.virtual;
     bestBook.isbn = google.isbn;
-
-    console.log(google.cover, openLibBook.cover, bestBook.cover);
     if (JSON.stringify(google) === JSON.stringify(openLibBook)) {
       return [bestBook, google];
     }

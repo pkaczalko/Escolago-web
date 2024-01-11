@@ -146,8 +146,8 @@
             </p>
             <p *ngIf="bookFront.virtual">
               link:
-              <a href="{{ bookFront.copies[0].link }}">{{
-                bookFront.copies[0].link
+              <a href="{{ bookFront.copies[0]?.link }}">{{
+                bookFront.copies[0]?.link
               }}</a>
             </p>
             <p>
@@ -255,6 +255,7 @@
                     </span>
 
                     <p-button
+                      *ngIf="!bookDTO?.virtual"
                       [style]="{ 'margin-left': '1rem' }"
                       label="Usuń"
                       icon="pi pi-trash"
@@ -270,7 +271,7 @@
             </p-table>
 
             <ng-template pTemplate="header">
-              <div class="dodaj" *ngIf="!this.bookDTO.virtual">
+              <div class="dodaj" *ngIf="!bookDTO?.virtual">
                 <p-button
                   (click)="addCopy()"
                   label="Dodaj"

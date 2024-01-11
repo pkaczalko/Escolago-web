@@ -1,7 +1,7 @@
 import { AssetDTO } from './assets';
 
 export interface ItemResponseDTO {
-  totalItems: number;
+  totalCount: number;
   items: ShortItemDTO[];
 }
 

@@ -39,7 +39,7 @@ import { AddCoverComponent } from './add-cover/add-cover.component';
 export class CroomComponent implements OnInit {
   items: ItemTable[] = [];
   selectedItem!: ItemTable;
-  totalRecords!: number;
+  totalCount: number = 0;
   ref: DynamicDialogRef | undefined;
   loading: boolean = false;
   newItem!: ItemDTO;
@@ -52,7 +52,6 @@ export class CroomComponent implements OnInit {
     private router: Router,
     private dialogService: DialogService,
     private messageService: MessageService,
-    private datePipe: DatePipe,
     private confirmationService: ConfirmationService,
   ) {}
 
@@ -68,18 +67,17 @@ export class CroomComponent implements OnInit {
     this.loading = true;
     setTimeout(() => {
       this.itemService
-        .getItems(page, this.searchValue, this.selectedAction?.key ?? '')
+        .getItems(page, this.searchValue,
+          this.selectedAction?.key ?? '')
         .subscribe((res) => {
           this.items = this.prepareData(res.items);
-          this.totalRecords = res.totalItems;
+          this.totalCount = res.totalCount;
           this.loading = false;
         });
     }, 500);
   }
-
   prepareData(items: ShortItemDTO[]): ItemTable[] {
     let table: ItemTable[] = [];
-
     items.forEach((item) => {
       table.push({
         ...item,

@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedModule } from 'primeng/api';
 import {
   TableLazyLoadEvent,
@@ -62,7 +62,7 @@ export class TableComponent implements OnInit {
       preparedData.push({
         name: element?.book?.bookTitle ?? element?.item?.name ?? '',
         assetId: element?.book?.assetId ?? element?.item?.assetId ?? 0,
-        dateAdded: element?.book?.addedDate ?? element?.item?.addedDate ?? '',
+        dateAdded: element?.book?.dateAdded ?? element?.item?.addedDate ?? '',
         id: element?.book?.bookId ?? element?.item?.id ?? 0,
         link: link,
         module: module,
@@ -70,11 +70,9 @@ export class TableComponent implements OnInit {
     });
     return preparedData;
   }
-
   onRowSelect($event: TableRowSelectEvent) {
     this.router.navigate([$event.data.link]);
   }
-
   loadAssets(page: number) {
     this.loading = true;
     this.assetsService.getAssets(page, this.searchValue).subscribe((data) => {
@@ -83,7 +81,6 @@ export class TableComponent implements OnInit {
       this.loading = false;
     });
   }
-
   search() {
     this.router
       .navigate(['/search'], { queryParams: { q: this.searchValue } })

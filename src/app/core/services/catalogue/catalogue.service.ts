@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
 import { CatalogueResponse } from '../../interfaces/catalogue';
-import { Shared } from '../../../shared/shared';
+
 
 @Injectable({
   providedIn: 'root',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DialogService } from 'primeng/dynamicdialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ConfirmationService, MessageService, SharedModule } from 'primeng/api';
 import { DatePipe, NgForOf, NgIf, UpperCasePipe } from '@angular/common';
@@ -17,7 +17,7 @@ import { ItemDTO, ItemEdit } from '../../../core/interfaces/items';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ItemService } from '../../../core/services/item/item.service';
-import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 @Component({
   selector: 'app-single-item',
@@ -56,6 +56,7 @@ export class SingleItemComponent implements OnInit {
   uploadUrl!: string;
   icon: string = 'pi pi-plus';
   buttonLabel: string = '';
+
 
   constructor(
     private itemService: ItemService,
@@ -117,16 +118,14 @@ export class SingleItemComponent implements OnInit {
   }
 
   delete() {
-    this.itemService.deleteItem(this.id.toString()).subscribe(() => {
+    this.itemService.deleteItem(this.id.toString())
+      .subscribe(() => {
       this.router.navigate(['/croom']).then(() => {
         this.messageService.add({
           severity: 'success',
           summary: 'Sukces',
           detail: 'Pomyślnie usunięto zasób',
-        });
-      });
-    });
-  }
+        });});});}
 
   onBasicUploadAuto(event: any) {
     if (event.originalEvent.body.url) {

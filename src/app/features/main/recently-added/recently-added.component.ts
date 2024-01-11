@@ -28,7 +28,8 @@ export class RecentlyAddedComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.assetsService.getLastAssets().subscribe((data) => {
+    this.assetsService.getLastAssets()
+      .subscribe((data) => {
       this.tableData = this.prepareData(data);
     });
   }
@@ -46,10 +47,14 @@ export class RecentlyAddedComponent implements OnInit {
         module = 'Świetlica';
       }
       preparedData.push({
-        name: element?.book?.bookTitle ?? element?.item?.name ?? '',
-        assetId: element?.book?.assetId ?? element?.item?.assetId ?? 0,
-        dateAdded: element?.book?.addedDate ?? element?.item?.addedDate ?? '',
-        id: element?.book?.bookId ?? element?.item?.id ?? 0,
+        name: element?.book?.bookTitle
+          ?? element?.item?.name ?? '',
+        assetId: element?.book?.assetId
+          ?? element?.item?.assetId ?? 0,
+        dateAdded: element?.book?.dateAdded
+          ?? element?.item?.addedDate ?? '',
+        id: element?.book?.bookId
+          ?? element?.item?.id ?? 0,
         link: link,
         module: module,
       });

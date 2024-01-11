@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   ConfirmationService,
-  LazyLoadEvent,
   MessageService,
 } from 'primeng/api';
 import {
@@ -14,13 +13,12 @@ import { CatalogueService } from '../../core/services/catalogue/catalogue.servic
 import { CatalogueDTO, CatalogueTable } from '../../core/interfaces/catalogue';
 import { DatePipe, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { Shared } from '../../shared/shared';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AddBookComponent } from './add-book/add-book.component';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import {
-  BookCopyDTO,
   BookCopyRespDTO,
   BookResponseDTO,
 } from '../../core/interfaces/book';
@@ -32,7 +30,6 @@ import { FormsModule } from '@angular/forms';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ToastModule } from 'primeng/toast';
 import { AddBookFileComponent } from './add-book/add-book-file/add-book-file.component';
-import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-library',
@@ -147,7 +144,8 @@ export class LibraryComponent implements OnInit, OnDestroy {
             else {
               this.fileConf();
             }
-          },
+          this.loadCatalogue(0);
+            },
         });
       }
     });
@@ -166,21 +164,15 @@ export class LibraryComponent implements OnInit, OnDestroy {
           contentStyle: { 'max-height': 'auto', overflow: 'auto' },
           data: this.newBook.id,
         });
-
         this.ref.onClose.subscribe({
           next: (data) => {
             if (data) {
               let copy: BookCopyRespDTO = {
                 rented: false,
                 date_added: <string>(
-                  this.datePipe.transform(Date.now(), 'yyyy-MM-dd')
-                ),
-              };
-
+                  this.datePipe.transform(Date.now(), 'yyyy-MM-dd')),};
               let copies: BookCopyRespDTO[] = [];
-              for (let i = 0; i < data.quantity; i++) {
-                copies.push(copy);
-              }
+              for (let i = 0; i < data.quantity; i++) {copies.push(copy);}
               this.bookService
                 .addCopy(this.newBook.id.toString(), copies)
                 .subscribe((res) => {
@@ -188,14 +180,10 @@ export class LibraryComponent implements OnInit, OnDestroy {
                     severity: 'success',
                     summary: 'Sukces',
                     detail: 'Dodano egzemplarze książki',
-                  });
-                });
-            }
-          },
+                  });});}},
           error: (err) => {},
           complete: () => {},
-        });
-      },
+        });},
       reject: () => {
         this.messageService.add({
           severity: 'success',
@@ -211,11 +199,12 @@ export class LibraryComponent implements OnInit, OnDestroy {
       message: 'Czy chcesz dodać plik do książki?',
       header: 'Plik',
       acceptLabel: 'Tak',
-      rejectLabel: 'Nie',
+      rejectLabel: 'Tak',
       accept: () => {
         this.addFile();
       },
       reject: () => {
+        this.addFile();
         this.messageService.add({
           severity: 'success',
           summary: 'Sukces',
@@ -234,23 +223,20 @@ export class LibraryComponent implements OnInit, OnDestroy {
       .addCopy(this.newBook.id.toString(), [newCopy])
       .subscribe((res: any) => {
         this.newBook.copies = res?.body ?? [];
-      });
-
+        console.log(this.newBook.copies);
     this.ref = this.dialogService.open(AddBookFileComponent, {
       header: 'Dodaj plik',
       width: '35vw',
       contentStyle: { 'max-height': 'auto', overflow: 'auto' },
-      data: this.newBook.id,
+      data: this.newBook.copies[0].asset_id.id,
     });
-
     this.ref.onClose.subscribe({
       next: (data) => {
         this.bookService
           .setCopyLink(this.newBook.copies[0].id, data)
           .subscribe({});
-      },
-      error: (err) => {},
-    });
+      }, error: (err) => {},
+    });});
   }
 
   searchCatalogue() {

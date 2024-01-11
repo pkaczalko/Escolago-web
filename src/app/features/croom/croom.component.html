@@ -50,7 +50,7 @@
     [tableStyle]="{ 'min-width': '75rem', 'min-height': '22rem' }"
     [paginator]="true"
     [rows]="10"
-    [totalRecords]="totalRecords"
+    [totalRecords]="totalCount"
     [loading]="loading"
   >
     <ng-template pTemplate="header">
@@ -64,7 +64,9 @@
     <ng-template pTemplate="body" let-item>
       <tr [pSelectableRow]="item" [style]="{ 'max-height': '5dvh' }">
         <td>{{ item.assetId.id }}</td>
-        <td>{{ item.name }}</td>
+        <td>
+          <b>{{ item.name }}</b>
+        </td>
         <td>
           {{ item.keywords }}
         </td>
@@ -78,7 +80,7 @@
     </ng-template>
     <ng-template pTemplate="summary">
       <div class="flex align-items-center justify-content-between">
-        <span> Łączna ilość: {{ totalRecords }} </span>
+        <span> Łączna ilość: {{ totalCount }} </span>
       </div>
     </ng-template>
   </p-table>

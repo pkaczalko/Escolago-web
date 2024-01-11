@@ -9,7 +9,7 @@ export interface BookAssetDTO {
   bookId: number;
   copyId: number;
   assetId: number;
-  addedDate: string;
+  dateAdded: string;
 }
 
 export interface ItemAssetDTO {

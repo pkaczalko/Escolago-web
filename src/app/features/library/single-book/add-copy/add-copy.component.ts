@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/api';
 import {
-  DialogService,
   DynamicDialogConfig,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
-import { BookService } from '../../../../core/services/book/book.service';
 import { InputTextModule } from 'primeng/inputtext';
-import { BookCopyDTO } from '../../../../core/interfaces/book';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -42,3 +38,28 @@ export class AddCopyComponent implements OnInit {
     this.ref.close({ link: this.link, quantity: this.quantity });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

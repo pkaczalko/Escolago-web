@@ -3,11 +3,13 @@
     [multiple]="false"
     name="file"
     [url]="uploadUrl"
-    [maxFileSize]="1000000"
+    [maxFileSize]="50000000"
     (onUpload)="onUpload($event)"
-    [auto]="true"
     chooseIcon="pi pi-plus"
     chooseLabel="Wybierz plik"
+    uploadLabel="Zapisz"
+    cancelLabel="Anuluj"
+    uploadIcon="pi pi-save"
   >
     <ng-template pTemplate="content">
       <ul *ngIf="uploadedFiles.length">
@@ -17,5 +19,4 @@
       </ul>
     </ng-template>
   </p-fileUpload>
-  <p-button label="Zapisz" (onClick)="save()"> </p-button>
 </p>

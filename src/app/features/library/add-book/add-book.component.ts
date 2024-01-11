@@ -15,7 +15,6 @@ import { SharedModule } from 'primeng/api';
 import { TableModule, TableRowSelectEvent } from 'primeng/table';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import {
-  BookInfo,
   BookInfoEdit,
   BookResponseDTO,
 } from '../../../core/interfaces/book';
